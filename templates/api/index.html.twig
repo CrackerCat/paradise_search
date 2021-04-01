@@ -3,27 +3,34 @@
 {% block title %}L'entreprise derrière Pépito{% endblock %}
 
 {% block body %}
-{#<ul>
-    <li>Nom d'entreprise-mère : {{pepito_company_name}}</li>
-    <li>Pays du siège : {{pepito_company_country}}</li>
-</ul>#}
+<h1>Nom d'entreprise-mère : </h1>
+<h3>{{pepito_company_name}}</h3>
+<h1>Pays du siège : </h1>
+<h3>{{pepito_company_country}}</h3>
 
-<h1>Filiales :</h1>
+
+<h1>Filiales dans les paradis fiscaux :</h1>
 <ul>
 
         {% for pepito_company_sub in pepito_company_subs %}
-        {#{% for i in 0..5 %}#}
-            <li>{{ pepito_company_sub.statement.properties.subsidiary.name }}</li>
+        
+            {% if pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Panama' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Cayman Islands' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Bahamas' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Hong Kong' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Singapore' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Luxembourg' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'United Arab Emirates' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Switzerland' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Swiss' %}
+                <li>Nom : {{ pepito_company_sub.statement.properties.subsidiary.name }} -- Pays : {{pepito_company_sub.statement.properties.subsidiary.jurisdiction}}</li>
+            {% endif %}
         {% endfor %}
 </ul>
 
 
-<h1>Filiales dans paradis fiscaux :</h1>
-
-<ul>
-<li></li>
-</ul>
-    
+<h1>Nombre total de filiales : </h1>    
+<h3>{{pepito_company_subs_count}}</h3>
 
 
 
