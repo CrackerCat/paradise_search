@@ -19,10 +19,6 @@ class APIController extends AbstractController
 
         $responseStatements = $httpClient->request('GET', 'https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
 
-        $statusCodeStatements = $responseStatements->getStatusCode();
-        // $statusCode = 200
-        //dump($statusCode);
-        $contentStatements = $responseStatements->getContent();
 
         $resultatStatements = json_decode($contentStatements);
 
@@ -35,7 +31,6 @@ class APIController extends AbstractController
         $contentStatements = $responseStatements->toArray();
         // transforms the response JSON content into a PHP array
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-        //dd($pepitoCompanySubsNames);
 
 
 
