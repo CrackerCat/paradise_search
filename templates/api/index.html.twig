@@ -1,2 +1,31 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}L'entreprise derrière Pépito{% endblock %}
+
+{% block body %}
+{#<ul>
+    <li>Nom d'entreprise-mère : {{pepito_company_name}}</li>
+    <li>Pays du siège : {{pepito_company_country}}</li>
+</ul>#}
+
+<h1>Filiales :</h1>
+<ul>
+
+        {% for pepito_company_sub in pepito_company_subs %}
+        {#{% for i in 0..5 %}#}
+            <li>{{ pepito_company_sub.statement.properties.subsidiary.name }}</li>
+        {% endfor %}
+</ul>
+
+
+<h1>Filiales dans paradis fiscaux :</h1>
+
+<ul>
+<li></li>
+</ul>
+    
+
+
+
+
+{% endblock %}
