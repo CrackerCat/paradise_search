@@ -15,3 +15,5 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 .DS_Store
+
+composer.lock
