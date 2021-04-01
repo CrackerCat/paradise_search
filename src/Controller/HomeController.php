@@ -19,11 +19,21 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/result{my_brand}", name="id_result")
+     * @Route("/result", name="id_result")
      */
     public function result(): Response
     {
         return $this->render('home/result.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+     * @Route("/infos", name="id_infos")
+     */
+    public function infos(): Response
+    {
+        return $this->render('home/infos.html.twig', [
             'controller_name' => 'HomeController',
         ]);
     }
