@@ -20,6 +20,8 @@ class APIController extends AbstractController
         $responseStatements = $httpClient->request('GET', 'https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
 
 
+        $contentStatements = $responseStatements->getContent();
+
         $resultatStatements = json_decode($contentStatements);
 
         $pepitoCompanySubsNames = $resultatStatements->results->statements;
@@ -31,6 +33,9 @@ class APIController extends AbstractController
         $contentStatements = $responseStatements->toArray();
         // transforms the response JSON content into a PHP array
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
+
+        
+
 
 
 
@@ -49,6 +54,8 @@ class APIController extends AbstractController
         $pepitoCompanyName = $resultatCompany->results->company->name;
         $pepitoCompanyCountry = $resultatCompany->results->company->jurisdiction_code;
         $pepitoCompanyCreation = $resultatCompany->results->company->incorporation_date;
+
+        // dd($resultatCompany);
 
         return $this->render('api/index.html.twig', [
             'pepito_company_name' => $pepitoCompanyName,
