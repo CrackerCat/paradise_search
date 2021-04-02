@@ -15,14 +15,7 @@ class APIController extends AbstractController
     public function index(): Response
     {
 
-        $httpClient = HttpClient::create();
-
-        $responseStatements = $httpClient->request('GET', 'https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
-
-
-        $contentStatements = $responseStatements->getContent();
-
-        $resultatStatements = json_decode($contentStatements);
+        $resultatStatements = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
 
         $pepitoCompanySubsNames = $resultatStatements->results->statements;
         $pepitoCompanySubsCount = $resultatStatements->results->total_count;
@@ -30,32 +23,19 @@ class APIController extends AbstractController
         // returns the raw content returned by the server (JSON in this case)
         // $content = '{"id":521583, "name":"symfony-docs", ...}'
         //dump($content);
-        $contentStatements = $responseStatements->toArray();
+        //$contentStatements = $responseStatements->toArray();
         // transforms the response JSON content into a PHP array
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
 
         
 
-
-
-
-        $httpClient = HttpClient::create();
-        
-        $responseCompany = $httpClient->request('GET', 'https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
-
-        $statusCode = $responseCompany->getStatusCode();
-        // $statusCode = 200
-        //dump($statusCode);
-
-        $contentCompany = $responseCompany->getContent();
-
-        $resultatCompany = json_decode($contentCompany);
+        $resultatCompany = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
         
         $pepitoCompanyName = $resultatCompany->results->company->name;
         $pepitoCompanyCountry = $resultatCompany->results->company->jurisdiction_code;
         $pepitoCompanyCreation = $resultatCompany->results->company->incorporation_date;
 
-        // dd($resultatCompany);
+        dd($resultatCompany);
 
         return $this->render('api/index.html.twig', [
             'pepito_company_name' => $pepitoCompanyName,
@@ -64,5 +44,20 @@ class APIController extends AbstractController
             'pepito_company_subs_count' => $pepitoCompanySubsCount,
             'pepito_company_creation' => $pepitoCompanyCreation,
         ]);
+    }
+
+    private function getResultApi(string $url)
+    {
+        $httpClient = HttpClient::create();
+        
+        $responseCompany = $httpClient->request('GET', $url);
+
+        $statusCode = $responseCompany->getStatusCode();
+        // $statusCode = 200
+        //dump($statusCode);
+
+        $contentCompany = $responseCompany->getContent();
+
+        return json_decode($contentCompany);
     }
 }
