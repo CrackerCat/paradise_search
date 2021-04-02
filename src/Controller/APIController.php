@@ -26,7 +26,6 @@ class APIController extends AbstractController
         //$contentStatements = $responseStatements->toArray();
         // transforms the response JSON content into a PHP array
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-
         
 
         $resultatCompany = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
