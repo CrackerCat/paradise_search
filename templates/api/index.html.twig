@@ -5,8 +5,12 @@
 {% block body %}
 <h1>Nom d'entreprise-mère : </h1>
 <h3>{{pepito_company_name}}</h3>
+
 <h1>Pays du siège : </h1>
 <h3>{{pepito_company_country}}</h3>
+
+<h1>Date de création :</h1>
+<h3>{{pepito_company_creation|date("d/m/Y")}}</h3>
 
 
 <h1>Filiales dans les paradis fiscaux :</h1>
@@ -31,8 +35,6 @@
 
 <h1>Nombre total de filiales : </h1>    
 <h3>{{pepito_company_subs_count}}</h3>
-
-
 
 
 {% endblock %}
