@@ -30,15 +30,16 @@ class APIController extends AbstractController
 
         $resultatCompany = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
         
+        
         $pepitoCompanyName = $resultatCompany->results->company->name;
         $pepitoCompanyCountry = $resultatCompany->results->company->jurisdiction_code;
         $pepitoCompanyCreation = $resultatCompany->results->company->incorporation_date;
 
         $resultatSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
 
-        $pepitoCompanySanctionsCheck = $resultatSanctions->statistics->names->values;
+        dd($resultatSanctions);
 
-        dd($pepitoCompanySanctionsCheck);
+        // dd($resultatCompany);
 
         return $this->render('api/index.html.twig', [
             'pepito_company_name' => $pepitoCompanyName,
