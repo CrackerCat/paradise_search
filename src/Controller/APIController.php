@@ -48,12 +48,14 @@ class APIController extends AbstractController
         
         $pepitoCompanyName = $resultatCompany->results->company->name;
         $pepitoCompanyCountry = $resultatCompany->results->company->jurisdiction_code;
+        $pepitoCompanyCreation = $resultatCompany->results->company->incorporation_date;
 
         return $this->render('api/index.html.twig', [
             'pepito_company_name' => $pepitoCompanyName,
             'pepito_company_country' => $pepitoCompanyCountry,
             'pepito_company_subs' => $pepitoCompanySubsNames,
             'pepito_company_subs_count' => $pepitoCompanySubsCount,
+            'pepito_company_creation' => $pepitoCompanyCreation,
         ]);
     }
 }
