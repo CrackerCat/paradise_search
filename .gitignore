@@ -17,3 +17,5 @@
 .DS_Store
 
 composer.lock
+/node_modules/
+/public/build/
