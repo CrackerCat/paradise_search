@@ -13,20 +13,47 @@
 <h3>{{pepito_company_creation|date("d/m/Y")}}</h3>
 
 
-<h1>Filiales dans les paradis fiscaux :</h1>
+<h1>Filiales dans les paradis fiscaux d'après l'UE :</h1>
 <ul>
-
         {% for pepito_company_sub in pepito_company_subs %}
         
-            {% if pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Panama' 
+            {% if pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'American Samoa' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Anguilla' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Dominica' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Fiji' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Guam' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Palau' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Panama' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Samoa' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Seychelles'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Trinidad and Tobago'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'US Virgin Islands'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Vanuatu' %}
+                <li>Nom : {{ pepito_company_sub.statement.properties.subsidiary.name }} -- Pays : {{pepito_company_sub.statement.properties.subsidiary.jurisdiction}}</li>
+            {% endif %}
+        {% endfor %}
+</ul>
+
+<h1>Filiales dans les paradis fiscaux d'après Oxfam :</h1>
+<ul>
+        {% for pepito_company_sub in pepito_company_subs %}
+        
+            {% if pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Bermuda' 
             or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Cayman Islands' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Bahamas' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Hong Kong' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Singapore' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Luxembourg' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'United Arab Emirates' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Switzerland' 
-            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Swiss' %}
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Netherlands' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Swiss' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Singapour' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Irland' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Luxemburg' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Curaçao' 
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Hong Kong'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Cyprus'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Bahamas'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Jersey'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Barbados'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'Mauritius'
+            or pepito_company_sub.statement.properties.subsidiary.jurisdiction == 'British Virgin Islands'
+             %}
                 <li>Nom : {{ pepito_company_sub.statement.properties.subsidiary.name }} -- Pays : {{pepito_company_sub.statement.properties.subsidiary.jurisdiction}}</li>
             {% endif %}
         {% endfor %}
