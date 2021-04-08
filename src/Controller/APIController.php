@@ -38,9 +38,10 @@ class APIController extends AbstractController
 
         $pepitoCompanySanctionsCheck = $resultatSanctions->statistics->names->values;
 
-        dd($pepitoCompanySanctionsCheck);
+        //dd($pepitoCompanySanctionsCheck);
 
-        return $this->render('api/index.html.twig', [
+        //return $this->render('api/index.html.twig', [
+        return new JsonResponse([  
             'pepito_company_name' => $pepitoCompanyName,
             'pepito_company_country' => $pepitoCompanyCountry,
             'pepito_company_subs' => $pepitoCompanySubsNames,
