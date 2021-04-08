@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class APIController extends AbstractController
 {
@@ -37,11 +38,13 @@ class APIController extends AbstractController
 
         $resultatSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
 
-        dd($resultatSanctions);
+        // dd($resultatSanctions);
 
         // dd($resultatCompany);
+        //dd($pepitoCompanySanctionsCheck);
 
-        return $this->render('api/index.html.twig', [
+        //return $this->render('api/index.html.twig', [
+        return new JsonResponse([
             'pepito_company_name' => $pepitoCompanyName,
             'pepito_company_country' => $pepitoCompanyCountry,
             'pepito_company_subs' => $pepitoCompanySubsNames,
