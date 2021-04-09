@@ -18,8 +18,8 @@ class APIController extends AbstractController
 
         $resultatStatements = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
 
-        $pepitoCompanySubsNames = $resultatStatements->results->statements;
-        $pepitoCompanySubsCount = $resultatStatements->results->total_count;
+        $MondelezSubsNames = $resultatStatements->results->statements;
+        $MondelezSubsCount = $resultatStatements->results->total_count;
 
         // returns the raw content returned by the server (JSON in this case)
         // $content = '{"id":521583, "name":"symfony-docs", ...}'
@@ -29,27 +29,27 @@ class APIController extends AbstractController
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
         
 
-        $resultatCompany = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
+        $resultat = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
         
         
-        $pepitoCompanyName = $resultatCompany->results->company->name;
-        $pepitoCompanyCountry = $resultatCompany->results->company->jurisdiction_code;
-        $pepitoCompanyCreation = $resultatCompany->results->company->incorporation_date;
+        $MondelezName = $resultat->results->company->name;
+        $MondelezCountry = $resultat->results->company->jurisdiction_code;
+        $MondelezCreation = $resultat->results->company->incorporation_date;
 
         $resultatSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
 
         // dd($resultatSanctions);
 
         // dd($resultatCompany);
-        //dd($pepitoCompanySanctionsCheck);
+        //dd($MondelezCompanySanctionsCheck);
 
         //return $this->render('api/index.html.twig', [
         return new JsonResponse([
-            'pepito_company_name' => $pepitoCompanyName,
-            'pepito_company_country' => $pepitoCompanyCountry,
-            'pepito_company_subs' => $pepitoCompanySubsNames,
-            'pepito_company_subs_count' => $pepitoCompanySubsCount,
-            'pepito_company_creation' => $pepitoCompanyCreation,
+            'Mondelez_name' => $MondelezName,
+            'Mondelez_country' => $MondelezCountry,
+            'Mondelez_subs' => $MondelezSubsNames,
+            'Mondelez_subs_count' => $MondelezSubsCount,
+            'Mondelez_creation' => $MondelezCreation,
         ]);
     }
 

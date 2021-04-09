@@ -6,41 +6,56 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      pepitoCompanyName:[
-      //'pepito_company_name',
-      //'pepito_company_country',
-      //'pepito_company_subs',
-      //'pepito_company_subs_count',
-      //'pepito_company_creation'
-      ]
+      MondelezName:[
+      //'Mondelez_name',
+      //'Mondelez_country',
+      //'Mondelez_subs',
+      //'Mondelez_subs_count',
+      //'Mondelez_creation'
+      ],
+      MondelezSubsNames:[],
     }
 console.log(this.state);
     
   }
 
   render() {
+
+    // let subnames = null ;
+    // if(this.state.MondelezSubsNames)
+    // {
+    //   subnames = this.state.MondelezSubsNames.map(filliale => (<div>
+    //     <p>{filliale.statement.properties.subsidiary.name}</p>
+    //     <p>{filliale.statement.properties.subsidiary.country}</p>
+    //     </div>))
+    // }
+  
+
     return (
       <div>
-        <p>{this.state.pepitoCompanyName}</p>
-        <p>{this.state.pepitoCompanyCountry}</p>
-        <p>{this.state.pepitoCompanySubsNames}</p>
-        {/* {this.state.pepitoCompanySubsNames.map(filliale => <p>{filliale}</p>)} */}
-        <button onClick={this.fetchPepito}>Fetch</button>
+        <p>{this.state.MondelezName}</p>
+        <p>{this.state.MondelezCountry}</p>
+        {/* <p>{this.state.MondelezSubsNames}</p> */}
+        {/* <p>{subnames}</p> */}
+        {this.state.MondelezSubsNames.map(filliale => (<>
+        <p>{filliale.statement.properties.subsidiary.name}</p>
+        <p>{filliale.statement.properties.subsidiary.country}</p>
+        </>))}
+        <button onClick={this.fetchMondelez}>Fetch</button>
       </div>
     )
     
   }
 
-  fetchPepito = () => {
+  fetchMondelez = () => {
     fetch(`http://localhost/${hostname}/paradise_search/public/index.php/api`).then(response => response.json()).then(response => {
       console.log(response);
       this.setState({
-        pepitoCompanyName: response.pepito_company_name,
-        pepitoCompanyCountry:response.pepito_company_country ,
-        pepitoCompanySubsNames: response.pepito_company_subs,
-        pepitoCompanySubsCount: response.pepito_company_subs_count,
-        pepitoCompanyCreation:response.pepito_company_creation,
-        
+        MondelezName: response.Mondelez_name,
+        MondelezCountry: response.Mondelez_country ,
+        MondelezSubsNames: response.Mondelez_subs,
+        MondelezSubsCount: response.Mondelez_subs_count,
+        MondelezCreation: response.Mondelez_creation,
       })
     })
   }
