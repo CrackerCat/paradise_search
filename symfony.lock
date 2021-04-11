@@ -109,7 +109,11 @@
             "ref": "6bea22e6c564fba3a1391615cada1437d0bde39c"
         },
         "files": [
+<<<<<<< HEAD
             "./config/packages/nelmio_cors.yaml"
+=======
+            "config/packages/nelmio_cors.yaml"
+>>>>>>> master
         ]
     },
     "nikic/php-parser": {
