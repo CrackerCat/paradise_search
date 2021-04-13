@@ -1,5 +1,6 @@
 import React from "react";
 import { hostname } from "../jsenv"
+import img from "../../../src/img/united-states.jpg"
 
 
 export default class Results extends React.Component {
@@ -34,16 +35,27 @@ export default class Results extends React.Component {
 
 
         return (
+
             <div>
+                <h1>L'entreprise derrière Pépito</h1>
+                <h3>Nom d'entreprise-mère :</h3>
                 <p>{this.state.MondelezName}</p>
+                <h1>Pays du siège : </h1>
                 <p>{this.state.MondelezCountry}</p>
+                <h2> chiffre d'affaire (million)</h2><br/>
+                    2020 € 21.661,654 <br/>
+                    2019 € 23.026,53 <br/>
+                    2018 € 22.653,264<br/>
+                    <img src={img} alt="carte états-unis"/>
                 {/* <p>{this.state.MondelezSubsNames}</p> */}
                 {/* <p>{subnames}</p> */}
                 {this.state.MondelezSubsNames.map(filliale => (<>
-                    <p>{filliale.statement.properties.subsidiary.name}</p>
-                    <p>{filliale.statement.properties.subsidiary.country}</p>
-                    
-                    
+                <ul>
+                    <li>
+                        <p>{filliale.statement.properties.subsidiary.name}</p>
+                        <p>{filliale.statement.properties.subsidiary.country}</p>
+                    </li>
+                </ul>
                 </>))}
                 
             </div>
