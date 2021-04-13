@@ -16,11 +16,11 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <h2>Ma super app</h2>
+          {/* <h2>Ma super app</h2> */}
           {<Header/>}
           <Navbar/>
           <Switch>
-            <Route path='/' exact>
+            <Route path='/Home' exact>
               <Home/>
             </Route>
             <Route path='/Disclaimer'>

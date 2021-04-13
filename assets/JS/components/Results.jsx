@@ -67,16 +67,16 @@ export default class Results extends React.Component {
         this.fetchMondelez()
     }
         
-      fetchMondelez = () => {
-              fetch(`http://localhost/${hostname}/paradise_search/public/index.php/api`).then(response => response.json()).then(response => {
+    fetchMondelez = () => {
+            fetch(`http://localhost/${hostname}/paradise_search/public/index.php/api`).then(response => response.json()).then(response => {
                   // console.log(response);
-                  this.setState({
-                      MondelezName: response.Mondelez_name,
-                      MondelezCountry: response.Mondelez_country,
-                      MondelezSubsNames: response.Mondelez_subs,
-                      MondelezSubsCount: response.Mondelez_subs_count,
-                      MondelezCreation: response.Mondelez_creation,
-                  })
-              })
-          }
+                this.setState({
+                    MondelezName: response.Mondelez_name,
+                    MondelezCountry: response.Mondelez_country,
+                    MondelezSubsNames: response.Mondelez_subs,
+                    MondelezSubsCount: response.Mondelez_subs_count,
+                    MondelezCreation: response.Mondelez_creation,
+                })
+            })
+        }
     };
