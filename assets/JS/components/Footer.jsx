@@ -1,6 +1,18 @@
 import React from 'react';
 
 export default class Footer extends React.Component {
+<<<<<<< HEAD
+    render() {
+
+        return ( 
+        <div>
+            @Footer Paradise Search 
+        </div>
+
+
+        )
+    }
+=======
   render() {
     return (
       <footer className="py-5 bg-dark">
@@ -10,4 +22,5 @@ export default class Footer extends React.Component {
       </footer>
     )
   }
+>>>>>>> 86bfd8538bd9a21112a828b9da0bb2b42e140471
 }

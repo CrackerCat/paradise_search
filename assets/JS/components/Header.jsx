@@ -1,6 +1,16 @@
 import React from 'react';
 
 export default class Header extends React.Component {
+<<<<<<< HEAD
+    render() {
+        return ( 
+        <div>
+            Bienvenue sur Paradise Search 
+        </div> 
+
+        )
+    }
+=======
   render() {
     return (
       <header className="bg-primary py-5 mb-5">
@@ -15,4 +25,5 @@ export default class Header extends React.Component {
     </header>
     )
   }
+>>>>>>> 86bfd8538bd9a21112a828b9da0bb2b42e140471
 }
