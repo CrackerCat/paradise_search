@@ -24,5 +24,4 @@ composer.lock
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
-/assets/js/jsenv.js
+/assets/js/jsenv

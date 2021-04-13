@@ -1,11 +1,12 @@
 import React from 'react';
 
 export default class Header extends React.Component {
-  render() {
-    return (
-      <div>
-        Bienvenue sur Paradise Search
-      </div>
-    )
-  }
+    render() {
+        return ( 
+        <div>
+            Bienvenue sur Paradise Search 
+        </div> 
+
+        )
+    }
 }

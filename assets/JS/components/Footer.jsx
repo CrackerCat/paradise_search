@@ -1,11 +1,14 @@
 import React from 'react';
 
 export default class Footer extends React.Component {
-  render() {
-    return (
-      <div>
-        @Footer Paradise Search
-      </div>
-    )
-  }
+    render() {
+
+        return ( 
+        <div>
+            @Footer Paradise Search 
+        </div>
+
+
+        )
+    }
 }
