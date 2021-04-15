@@ -1,10 +1,11 @@
 import React from "react";
 import { hostname } from "../jsenv"
-import img from "../../../src/img/united-states.jpg"
-
+//import img from "../../../src/img/united-states.jpg"
+import '/assets/styles/app.css';
+import GraphCA from "./GraphCA";
+import Map from "./Map";
 
 export default class Results extends React.Component {
-
 
     constructor() {
         super();
@@ -33,42 +34,96 @@ export default class Results extends React.Component {
         //     </div>))
         // }
 
-
         return (
-
+        
+        <div>
             <div>
-                <h1>L'entreprise derrière Pépito</h1>
-                <h3>Nom d'entreprise-mère :</h3>
-                <p>{this.state.MondelezName}</p>
-                <h1>Pays du siège : </h1>
-                <p>{this.state.MondelezCountry}</p>
-                <h2> chiffre d'affaire (million)</h2><br/>
-                    2020 € 21.661,654 <br/>
-                    2019 € 23.026,53 <br/>
-                    2018 € 22.653,264<br/>
-                    <img src={img} alt="carte états-unis"/>
-                {/* <p>{this.state.MondelezSubsNames}</p> */}
-                {/* <p>{subnames}</p> */}
-                {this.state.MondelezSubsNames.map(filliale => (<>
                 <ul>
-                    <li>
-                        <p>{filliale.statement.properties.subsidiary.name}</p>
-                        <p>{filliale.statement.properties.subsidiary.country}</p>
-                    </li>
-                </ul>
-                </>))}
-                
-            </div>
-        )
 
-    }
+                    <ol></ol>
+                    <ol><h2>{this.state.MondelezName}</h2></ol>
+                    <ol></ol>
+                    <ol><h4>Pays du siège : Etats-Unis</h4></ol>
+                </ul>
+            </div>
+                    
+            <div className="row">
+                <div className="col-md-4 mb-4">
+                    <div className="card h-100">
+                        <div className="card-body">
+                            <h4 className="card-title">Chiffre d'affaire (M€) :</h4>
+                            <GraphCA/>
+                            <p className="card-text"></p>
+                        </div>
+                        <div className="card-footer">
+                        {/*<a href="#" className="btn btn-primary">Lien vers Graphique</a>*/}
+                    </div>
+                </div>
+            </div>
+                        
+            <div className="col-md-4 mb-4">
+                <div className="card h-100">
+                        <div className="card-body">
+                            <h4 className="card-title">Date de création :</h4>
+                                <p className="card-text">20-12-2020</p>    
+                        </div>
+                        <div className="card-footer">
+                            {/*<a href="#" className="btn btn-primary">Lien vers la carte</a>*/}
+                        </div>
+                    </div>
+                </div>
+
+            <div className="col-md-4 mb-4">
+                <div className="card h-100">
+                    
+                    <div className="card-body">
+                        <h4 className="card-title">Siège</h4>
+                        <Map/>
+                    </div>
+                </div>
+            </div>
+                        
+            <div className="col-md-5 mb-3">
+                <div className="card h-100">
+                    <div className="card-body">
+                        <h4 className="card-title">Les filiales dans les paradis fiscaux :</h4>
+                                
+                            {/* <p>{this.state.MondelezSubsNames}</p> */}
+                            {/* <p>{subnames}</p> */}
+                            {this.state.MondelezSubsNames.map(filliale => (<>
+                        <ul>
+                            <li>
+                                <p>{filliale.statement.properties.subsidiary.name} ({filliale.statement.properties.subsidiary.jurisdiction})</p>
+                            </li>
+                        </ul>
+                        </>))}          
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-5 mb-3">
+                <div className="card h-100">
+                    <div className="card-body">
+                        <h4 className="card-title">Sanction prononcées envers l'entreprise :</h4>
+                        <p className="card-text">AUCUNE</p>  
+                    </div>
+                </div>
+            </div>
+                        
+            </div>
+        </div>
+        
+        )}
+            
+        
+
+    
 
     componentDidMount() {
         this.fetchMondelez()
     }
         
     fetchMondelez = () => {
-            fetch(`http://localhost/${hostname}/paradise_search/public/index.php/api`).then(response => response.json()).then(response => {
+        fetch(`http://localhost:8000/api`).then(response => response.json()).then(response => {
                   // console.log(response);
                 this.setState({
                     MondelezName: response.Mondelez_name,

@@ -1,13 +1,18 @@
 import React from "react";
 import Disclaimer from "./components/Disclaimer"
-import Home from "./components/Home"
+import HomeSelect from "./components/HomeSelect"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Results from "./components/Results";
+import HomeBrands from "./components/HomeBrands"
+import TermsOfUse from "./components/TermsOfUse"
+import About from "./components/About"
 import {
   BrowserRouter, Route, Switch
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import '/assets/styles/app.css';
+
 
 
 export default class App extends React.Component {
@@ -17,14 +22,20 @@ export default class App extends React.Component {
       <BrowserRouter>
         <div>
           {/* <h2>Ma super app</h2> */}
-          {<Header/>}
           <Navbar/>
+          {<Header/>}
           <Switch>
-            <Route path='/Home' exact>
-              <Home/>
+            <Route path='/HomeSelect' exact>
+              <HomeSelect/>
             </Route>
-            <Route path='/Disclaimer'>
-              <Disclaimer/>
+            <Route path='/HomeBrands'>
+              <HomeBrands/>
+            </Route>
+            <Route path='/About'>
+              <About/>
+            </Route>
+            <Route path='/TermsOfUse'>
+              <TermsOfUse/>
             </Route>
             <Route path='/Results'>
               <Results/>
