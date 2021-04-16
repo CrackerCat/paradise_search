@@ -15,28 +15,30 @@ export default class GraphCA extends React.Component {
 
     // Create chart instance
     var chart = am4core.create("chartdivgraph", am4charts.XYChart3D);
+   
 
     // Add data
     chart.data = [{
-      "year": "2020",
-      "CA": 21661,
+      "year": "2018",
+      "CA": 22653,
       
     }, {
       "year": "2019",
       "CA": 23026,
     
     }, {
-      "year": "2018",
-      "CA": 22653,
+      "year": "2020",
+      "CA": 21661,
     
     }];
 
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "year";
-    categoryAxis.title.text = "Année";
+ 
+
 
     var  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-    valueAxis.title.text = "Chiffre d'affaires (Millions d'€)";
+    //valueAxis.title.text = "Chiffre d'affaires (Millions d'€)";
     valueAxis.min = 0;
 
     // Create series
@@ -45,9 +47,11 @@ export default class GraphCA extends React.Component {
     series.dataFields.categoryX = "year";
     series.name = "Chiffre d'affaires";
     series.tooltipText = "{name}: [bold]{valueY}M€[/]";
+    series.fill = am4core.color("#FEED00");
 
     // Add cursor
     chart.cursor = new am4charts.XYCursor();
+    
   }
 
   render() {

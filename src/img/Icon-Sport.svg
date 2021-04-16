@@ -1,0 +1,11 @@
+<svg id="Icon-Sport" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="Icon">
+    <circle id="Ellipse_40" data-name="Ellipse 40" cx="45" cy="45" r="45" fill="#2f392b"/>
+  </g>
+  <g id="basketball" transform="translate(25 23.315)">
+    <circle id="Ellipse_47" data-name="Ellipse 47" cx="19" cy="19" r="19" transform="translate(2 1.685)" fill="#e7e9d4" stroke="#2f392b" stroke-width="3"/>
+    <path id="Tracé_201" data-name="Tracé 201" d="M3,8.012c5.721-1.7,13.189.06,19.313,5.12,6.219,5.14,9.356,12.283,8.637,18.28" transform="translate(0.89 4.735)" fill="#e7e9d4" stroke="#2f392b" stroke-width="3"/>
+    <path id="Tracé_202" data-name="Tracé 202" d="M10.372,36.29c-1.438-4.6-.172-11.666,3.726-18.419,3.887-6.732,9.35-11.353,14.046-12.427" transform="translate(6.873 3.017)" fill="none" stroke="#2f392b" stroke-width="3"/>
+    <path id="Tracé_203" data-name="Tracé 203" d="M19.452,2a30.918,30.918,0,0,1-4.18,12.192C11.624,20.51,6.638,24.937,2.4,26.113" transform="translate(0.356 0)" fill="none" stroke="#2f392b" stroke-width="3"/>
+  </g>
+</svg>

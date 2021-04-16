@@ -1,0 +1,10 @@
+<svg id="Icon-Rocket" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <circle id="Ellipse_48" data-name="Ellipse 48" cx="45" cy="45" r="45" fill="#2f392b"/>
+  <g id="Groupe_169" data-name="Groupe 169" transform="translate(140.836 -325.607) rotate(45)">
+    <g id="Groupe_162" data-name="Groupe 162" transform="translate(2.179 -3.192)">
+      <path id="Tracé_243" data-name="Tracé 243" d="M207.773,342.729h-9.75c-.221,1.276-.366,2.019-.366,2.019H185.512s-.144-.743-.366-2.019h-9.74l4.05-12.146h4.259c-.144-1.364-.211-2.7-.233-4.049a22.491,22.491,0,0,1,.432-4.048,31.316,31.316,0,0,1,7.676-14.176,31.4,31.4,0,0,1,7.665,14.176,22.493,22.493,0,0,1,.432,4.048c-.022,1.354-.089,2.685-.233,4.049h4.259Z" fill="#e7e9d4"/>
+      <path id="Tracé_244" data-name="Tracé 244" d="M191.512,355.591c-2.7-4.462-2.523-7.593,0-7.593S194.214,351.11,191.512,355.591Z" fill="#e7e9d4"/>
+    </g>
+    <circle id="Ellipse_46" data-name="Ellipse 46" cx="3.846" cy="3.846" r="3.846" transform="translate(189.739 318.579)" fill="#2f392b"/>
+  </g>
+</svg>

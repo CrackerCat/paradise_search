@@ -27,11 +27,11 @@ export default class Map extends React.Component {
     // Configure series
     var polygonTemplate = polygonSeries.mapPolygons.template;
     polygonTemplate.tooltipText = "{name}";
-    polygonTemplate.fill = am4core.color("#74B266");
+    polygonTemplate.fill = am4core.color("#69E89C");
 
     // Create hover state and set alternative fill color
     var hs = polygonTemplate.states.create("hover");
-    hs.properties.fill = am4core.color("#367B25");
+    hs.properties.fill = am4core.color("#FEED00");
 
     // Remove Antarctica
     polygonSeries.exclude = ["AQ"];

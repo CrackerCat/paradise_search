@@ -4,6 +4,10 @@ import { hostname } from "../jsenv"
 import '/assets/styles/app.css';
 import GraphCA from "./GraphCA";
 import Map from "./Map";
+import logo_mondelez from "/Applications/MAMP/htdocs/paradise_search/src/img/Brand-Mondelez.svg";
+import icon_chart from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Chart.svg";
+import icon_world_y from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-World-Y.svg";
+import icon_alert_g from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Alert-G.svg";
 
 export default class Results extends React.Component {
 
@@ -35,80 +39,123 @@ export default class Results extends React.Component {
         // }
 
         return (
-        
         <div>
             <div>
-                <ul>
-
-                    <ol></ol>
-                    <ol><h2>{this.state.MondelezName}</h2></ol>
-                    <ol></ol>
-                    <ol><h4>Pays du siège : Etats-Unis</h4></ol>
-                </ul>
+                <div className="row">
+                    <div className="col-md-4 mb-4">
+                        <div className="card h-100">
+                            <div className="card-text">
+                                <img src={logo_mondelez} alt="logo mondelez"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-8 mb-8">
+                        <div className="card h-100">
+                            <div className="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, iure nobis, accusamus fuga cum repudiandae impedit quaerat facere minus ducimus voluptatem, perferendis magni? Inventore consequuntur unde voluptatibus mollitia. Excepturi, nobis!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-                    
             <div className="row">
                 <div className="col-md-4 mb-4">
                     <div className="card h-100">
                         <div className="card-body">
-                            <h4 className="card-title">Chiffre d'affaire (M€) :</h4>
-                            <GraphCA/>
-                            <p className="card-text"></p>
+                            <img src={icon_chart} alt="chiffre d'affaire"/>
+                            <h4 className="card-title">Chiffre d'affaire</h4>
+                            <h4 className="card-title">21 661 (M€)</h4>
                         </div>
-                        <div className="card-footer">
-                        {/*<a href="#" className="btn btn-primary">Lien vers Graphique</a>*/}
                     </div>
                 </div>
-            </div>
                         
-            <div className="col-md-4 mb-4">
-                <div className="card h-100">
+                <div className="col-md-4 mb-4">
+                    <div className="card h-100">
                         <div className="card-body">
-                            <h4 className="card-title">Date de création :</h4>
-                                <p className="card-text">20-12-2020</p>    
-                        </div>
-                        <div className="card-footer">
-                            {/*<a href="#" className="btn btn-primary">Lien vers la carte</a>*/}
+                            <GraphCA/>
                         </div>
                     </div>
                 </div>
 
-            <div className="col-md-4 mb-4">
-                <div className="card h-100">
-                    
-                    <div className="card-body">
-                        <h4 className="card-title">Siège</h4>
-                        <Map/>
+                <div className="col-md-4 mb-4">
+                    <div className="card h-100">
+                        <div className="card-body">
+                            <h4 className="card-title"></h4>
+                            <Map/>
+                        </div>
                     </div>
                 </div>
-            </div>
-                        
-            <div className="col-md-5 mb-3">
-                <div className="card h-100">
-                    <div className="card-body">
-                        <h4 className="card-title">Les filiales dans les paradis fiscaux :</h4>
-                                
-                            {/* <p>{this.state.MondelezSubsNames}</p> */}
-                            {/* <p>{subnames}</p> */}
-                            {this.state.MondelezSubsNames.map(filliale => (<>
-                        <ul>
-                            <li>
-                                <p>{filliale.statement.properties.subsidiary.name} ({filliale.statement.properties.subsidiary.jurisdiction})</p>
-                            </li>
-                        </ul>
-                        </>))}          
+            <div/>   
+            <div className="row">  
+                <div className="col-md-4 mb-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <img src={icon_world_y} alt="paradis fiscaux"/>
+                                <h4 className="card-title">Filiales | paradis fiscal</h4>
+                                <p className="card-text">9</p>
+                                {/*<p className="card-text">{this.state.MondelezSubsCount}</p>  */}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="col-md-5 mb-3">
-                <div className="card h-100">
-                    <div className="card-body">
-                        <h4 className="card-title">Sanction prononcées envers l'entreprise :</h4>
-                        <p className="card-text">AUCUNE</p>  
+                    <div className="col-md-4 mb-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                    {/* <p>{this.state.MondelezSubsNames}</p> */}
+                                    {/* <p>{subnames}</p> */}
+                                    {this.state.MondelezSubsNames.map(filliale => (<>
+                                            <ul>
+                                                
+                                                {filliale.statement.properties.subsidiary.jurisdiction =='Switzerland' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Netherlands' ||  
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Bermuda' ||  
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Cayman Islands' || 
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Singapour' || 
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Irland' || 
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Luxemburg' || 
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Curaçao' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Hong Kong' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Cyprus' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Bahamas' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Jersey' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Barbados' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='Mauritius' ||
+                                                filliale.statement.properties.subsidiary.jurisdiction
+                                                =='British Virgin Islands'?
+                                                <li>
+                                                    <p>Nom : {filliale.statement.properties.subsidiary.name}</p>
+                                                    <p>Pays : ({filliale.statement.properties.subsidiary.jurisdiction})</p>
+                                                </li>
+                                                :""}
+                                            </ul>
+                                        </>))}
+                                    
+                                        {/*<h2>Nombre de filiales parcourues : 100</h2>          */}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-                        
+                    <div className="col-md-4 mb-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <img src={icon_alert_g} alt="sanctions"/>
+                                <h4 className="card-title">Sanctions</h4>
+                                <p className="card-text">AUCUNE</p>  
+                            </div>
+                        </div>
+                    </div>
+                </div>       
             </div>
         </div>
         
@@ -131,6 +178,7 @@ export default class Results extends React.Component {
                     MondelezSubsNames: response.Mondelez_subs,
                     MondelezSubsCount: response.Mondelez_subs_count,
                     MondelezCreation: response.Mondelez_creation,
+                    MondelezResultatSanctions: response.Mondelez_sanction,
                 })
             })
         }

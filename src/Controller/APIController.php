@@ -16,7 +16,7 @@ class APIController extends AbstractController
     public function index(): Response
     {
 
-        $resultatStatements = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe');
+        $resultatStatements = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796/statements?api_token=LndrOC38xehzcVPXfIfe&per_page=100');
 
         $MondelezSubsNames = $resultatStatements->results->statements;
         $MondelezSubsCount = $resultatStatements->results->total_count;
@@ -29,16 +29,18 @@ class APIController extends AbstractController
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
         
 
-        $resultat = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe');
+        $resultat = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe&per_page=100');
         
         
         $MondelezName = $resultat->results->company->name;
         $MondelezCountry = $resultat->results->company->jurisdiction_code;
         $MondelezCreation = $resultat->results->company->incorporation_date;
 
-        $resultatSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
+        $MondelezSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
 
-        // dd($resultatSanctions);
+        $MondelezResultatSanctions = $MondelezSanctions->statistics->schema->values->Sanction;
+
+        // dd($MondelezSanctions);
 
         // dd($resultatCompany);
         //dd($MondelezCompanySanctionsCheck);
@@ -50,6 +52,7 @@ class APIController extends AbstractController
             'Mondelez_subs' => $MondelezSubsNames,
             'Mondelez_subs_count' => $MondelezSubsCount,
             'Mondelez_creation' => $MondelezCreation,
+            'Mondelez_sanction' => $MondelezResultatSanctions,
         ]);
     }
 

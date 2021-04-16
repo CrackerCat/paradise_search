@@ -1,0 +1,6 @@
+<svg id="Icon-Creation" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="Icon" transform="translate(-263.153 -562.321)">
+    <circle id="Ellipse_40" data-name="Ellipse 40" cx="45" cy="45" r="45" transform="translate(263.153 562.321)" fill="#2f392b"/>
+  </g>
+  <path id="feather" d="M5.238,28.471A29.817,29.817,0,0,0,5,32.235V36m.238-7.529A27.6,27.6,0,0,1,33.235,4l-1.882,7.529H25.706l1.882,3.765-3.765,3.765H16.294l3.765,3.765-1.882,3.765H10.647Z" transform="translate(26.5 25.5)" fill="#e7e9d4" stroke="#e7e9d4" stroke-width="3"/>
+</svg>
