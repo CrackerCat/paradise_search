@@ -15,7 +15,7 @@ export default class GraphCA extends React.Component {
 
     // Create chart instance
     var chart = am4core.create("chartdivgraph", am4charts.XYChart3D);
-   
+
 
     // Add data
     chart.data = [{

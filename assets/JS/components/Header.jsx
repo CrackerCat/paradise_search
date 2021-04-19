@@ -6,8 +6,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <html>
-        <header className="bg-primary py-5 mb-5">
-          <img src={logo} />
+        <header className="Header bg-primary py-5 mb-5">
+          <a href="HomeSelect"><img className="logoheader" src={logo}/></a>
         </header>
       </html>
     )
