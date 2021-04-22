@@ -19,8 +19,8 @@ export default class Footer extends React.Component {
             <div class="col-md-4 mb-4 FooterThree">
               <label className="m-0 text-left text-white" id="entreprise">Vous souhaitez nous soumettre une entreprise à référencer ?</label>
               
-                <input className="m-0 text-left text-white full-width" type="soumettre" id="entreprise" 
-                placeholder="Company Name" ></input>
+                <input className="m-0 text-left text-white full-width" type="text" id="entreprise" 
+                placeholder="Coca Cola" ></input>
                 {/*<button className="m-0 text-left text-white" type="submit" href="">Envoyer</button>*/}
           
               
