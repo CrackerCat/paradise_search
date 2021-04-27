@@ -260,13 +260,19 @@ border-style: none;
 padding: 1rem;
 }
 
-img.imgHomeSelect:hover, img.imgHomeBrands:hover, img.imgBrand:hover{
+img.imgHomeSelect:hover, img.imgBrand:hover, img.imgBrandLine:hover{
     background-color: #feed00;
 }
 
 img.imgBrand{
     width: 220px;
     height: 220px
+}
+
+img.imgBrandLine{
+    width: 290px;
+    height: 120px;
+    margin-top: 3rem;
 }
 /*.imgMarie{
     padding-top: 1rem;
