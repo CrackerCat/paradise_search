@@ -260,7 +260,7 @@ border-style: none;
 padding: 1rem;
 }
 
-img.imgHomeSelect:hover, img.imgBrand:hover, img.imgBrandLine:hover{
+img.imgHomeSelect:hover, img.imgBrand:hover, img.imgBrandLine:hover, img.imgBrandStimorol:hover, img.imgBrandTuc:hover, img.imgBrandBrun:hover, img.imgBrandHollywood:hover, img.imgBrandLu:hover{
     background-color: #feed00;
 }
 
@@ -272,6 +272,32 @@ img.imgBrand{
 img.imgBrandLine{
     width: 290px;
     height: 120px;
+    margin-top: 3rem;
+}
+
+img.imgBrandStimorol{
+    width: 290px;
+    height: 210px;
+}
+
+img.imgBrandLu{
+    width: 200px;
+    height: 200px;
+}
+
+img.imgBrandTuc{
+    width: 240px;
+    height: 240px;
+}
+
+img.imgBrandBrun{
+    width: 270px;
+    height: 260px;
+}
+
+img.imgBrandHollywood{
+    width: 290px;
+    height: 110px;
     margin-top: 3rem;
 }
 /*.imgMarie{

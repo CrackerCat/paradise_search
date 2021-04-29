@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}MondelezSubs{% endblock %}
+
+{% block main %}
+    <h1>MondelezSubs</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mondelez_sub.id }}</td>
+            </tr>
+            <tr>
+                <th>Subs_id</th>
+                <td>{{ mondelez_sub.subsId }}</td>
+            </tr>
+            <tr>
+                <th>Subs_name</th>
+                <td>{{ mondelez_sub.subsName }}</td>
+            </tr>
+            <tr>
+                <th>Subs_country</th>
+                <td>{{ mondelez_sub.subsCountry }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('mondelez_subs_index') }}">back to list</a>
+
+    <a href="{{ path('mondelez_subs_edit', {'id': mondelez_sub.id}) }}">edit</a>
+
+    {{ include('mondelez_subs/_delete_form.html.twig') }}
+{% endblock %}
