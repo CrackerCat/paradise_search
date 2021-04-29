@@ -43,7 +43,7 @@ export default class Results extends React.Component {
                 <div>
                     <div>
                         <div className="row">
-                            <div className="col-md-4 mb-4">
+                            <div className="col-md-4 p-0">
                                 
                                     <div className="card-text">
                                         <img src={logo_mondelez} alt="logo mondelez"/>
@@ -60,9 +60,9 @@ export default class Results extends React.Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-4 mb-4">
-                            <div className="card h-100">
-                                <div className="card-body">
+                        <div className="col-md-4 p-0">
+                            <div className="card h-100 border-0">
+                                <div className="card-body border-dark border-right  border-bottom">
                                     <img  src={icon_chart} alt="chiffre d'affaire"/>
                                     <h4 className="card-title">Chiffre d'affaire</h4>
                                     <h4 className="card-title">21 661 (M€)</h4>
@@ -70,17 +70,17 @@ export default class Results extends React.Component {
                             </div>
                         </div>
                                 
-                        <div className="col-md-4 mb-4">
-                            <div className="card h-100">
-                                <div className="card-body">
+                        <div className="col-md-4 p-0">
+                            <div className="card h-100 border-0">
+                                <div className="card-body border-dark border-right border-left border-bottom">
                                     <GraphCA/>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="col-md-4 mb-4">
-                            <div className="card h-100">
-                                <div className="card-body">
+                        <div className="col-md-4 p-0">
+                            <div className="card h-100 border-0">
+                                <div className="card-body border-dark border-left  border-bottom">
                                     <h4 className="card-title"></h4>
                                     <Map/>
                                 </div>
@@ -88,9 +88,9 @@ export default class Results extends React.Component {
                         </div>
                     <div/>   
                     {/*<div className="row">  */}
-                        <div className="col-md-4 mb-4">
-                                <div className="card h-100">
-                                    <div className="card-body">
+                        <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
+                                    <div className="card-body border-dark border-top ">
                                         <img src={icon_world_y} alt="paradis fiscaux"/>
                                         <h4 className="card-title">Filiales | paradis fiscal</h4>
                                         <h2 className="card-text">9</h2>
@@ -98,9 +98,9 @@ export default class Results extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 mb-4">
-                                <div className="card h-100">
-                                    <div className="card-body filiales">
+                            <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
+                                    <div className="card-body filiales border-dark border-right border-top ">
                                             {/* <p>{this.state.MondelezSubsNames}</p> */}
                                             {/* <p>{subnames}</p> */}
                                             {this.state.MondelezSubsNames.map(filliale => (<>
@@ -147,9 +147,9 @@ export default class Results extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-md-4 mb-4">
-                                <div className="card h-100">
-                                    <div className="card-body">
+                            <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
+                                    <div className="card-body border-dark border-left border-top ">
                                         <img src={icon_alert_g} alt="sanctions"/>
                                         <h4 className="card-title">Sanctions</h4>
                                         <p className="card-text">AUCUNE</p>  

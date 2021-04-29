@@ -108,9 +108,10 @@ Header{
     margin: auto;
     text-align: center;
     width: 100%;
+    background-repeat: round;
 }
 .logoheader{
-    width: 40%;
+    width: 34%;
     margin-top: 5rem;
     padding-bottom: 0;
 }
