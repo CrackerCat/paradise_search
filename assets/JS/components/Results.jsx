@@ -22,7 +22,7 @@ export default class Results extends React.Component {
                 //'Mondelez_creation'
             ],
             MondelezSubsNames: [],
-            //MondelezSubs: [],
+            MondelezSubs: [],
             
         }
         // console.log(this.state);
@@ -103,44 +103,43 @@ export default class Results extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body filiales border-dark border-right border-top ">
-                                    {/*{console.log(MondelezSubs)}*/}
+                                    
                                             {/*<p>{this.state.MondelezSubsNames}</p>*/}
-                                            {/* <p>{subnames}</p> */}
-                                            {/*{this.state.MondelezSubsNames.map(filliale => (<>
+                                            {/*<p>{this.state.MondelezSubs.subsname}</p>*/}
+                                            {/*{this.state.MondelezSubs.map(filliale => (<>
                                                     <ul>
-                                                        
-                                                        {filliale.subs_country =='Switzerland' ||
-                                                        filliale.subs_country
+                                                        {filliale.subscountry =='Switzerland' ||
+                                                        filliale.subscountry
                                                         =='Netherlands' ||  
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Bermuda' ||  
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Cayman Islands' || 
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Singapour' || 
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Irland' || 
                                                         filliale.subs_country
                                                         =='Luxemburg' || 
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Curaçao' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Hong Kong' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Cyprus' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Bahamas' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Jersey' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Barbados' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='Mauritius' ||
-                                                        filliale.subs_country
+                                                        filliale.subscountry
                                                         =='British Virgin Islands'?
                                                         <li>
-                                                            <p>{filliale.subs_name}</p>
-                                                            <p>{filliale.subs_country}</p>
+                                                            <p>{filliale.subsname}</p>
+                                                            <p>{filliale.subscountry}</p>
                                                         </li>
                                                         :""}
                                                     </ul>
@@ -203,27 +202,34 @@ export default class Results extends React.Component {
             </body>
         
         )}
-            
-        
-
-    
 
     componentDidMount() {
-        this.fetchMondelez()
+        this.fetchMondelez();
+        this.fetchMondelezSubs()
     }
         
     fetchMondelez = () => {
         fetch(`http://localhost:8000/api`).then(response => response.json()).then(response => {
-                  // console.log(response);
-                this.setState({
-                    MondelezName: response.Mondelez_name,
-                    MondelezCountry: response.Mondelez_country,
-                    MondelezSubsNames: response.Mondelez_subs_names,
-                    MondelezSubsCount: response.Mondelez_subs_count,
-                    MondelezCreation: response.Mondelez_creation,
-                    MondelezResultatSanctions: response.Mondelez_sanction,
-                    //MondelezSubs: response.Mondelez_subs,
-                })
+                console.log(response);
+            this.setState({
+                MondelezName: response.Mondelez_name,
+                MondelezCountry: response.Mondelez_country,
+                MondelezSubsNames: response.Mondelez_subs_names,
+                MondelezSubsCount: response.Mondelez_subs_count,
+                MondelezCreation: response.Mondelez_creation,
+                MondelezResultatSanctions: response.Mondelez_sanction,
+                //MondelezSubs: response.Mondelez_subs,
             })
-        }
-    };
+        });
+    
+        
+    }
+
+    fetchMondelezSubs = () => {
+        fetch(`http://localhost:8000/mondelez/subs`).then(response => response.json()).then(response => {
+            console.log(response);
+            this.setState({
+                MondelezSubs: response.Mondelez_subsname,
+            })
+        });
+    }};

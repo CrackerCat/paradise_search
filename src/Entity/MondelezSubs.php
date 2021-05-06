@@ -18,14 +18,14 @@ class MondelezSubs
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=70)
      */
-    private $subs_name;
+    private $subsname;
 
     /**
-     * @ORM\Column(type="string", length=60)
+     * @ORM\Column(type="string", length=70)
      */
-    private $subs_country;
+    private $subscountry;
 
     public function getId(): ?int
     {
@@ -34,24 +34,24 @@ class MondelezSubs
 
     public function getSubsName(): ?string
     {
-        return $this->subs_name;
+        return $this->subsname;
     }
 
-    public function setSubsName(string $subs_name): self
+    public function setSubsName(string $subsname): self
     {
-        $this->subs_name = $subs_name;
+        $this->subsname = $subsname;
 
         return $this;
     }
 
     public function getSubsCountry(): ?string
     {
-        return $this->subs_country;
+        return $this->subscountry;
     }
 
-    public function setSubsCountry(string $subs_country): self
+    public function setSubsCountry(string $subscountry): self
     {
-        $this->subs_country = $subs_country;
+        $this->subscountry = $subscountry;
 
         return $this;
     }

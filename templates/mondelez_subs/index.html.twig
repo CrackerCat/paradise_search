@@ -1,39 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}MondelezSubs index{% endblock %}
+{% block title %}Hello MondelezSubsController!{% endblock %}
 
 {% block main %}
-    <h1>MondelezSubs index</h1>
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Subs_id</th>
-                <th>Subs_name</th>
-                <th>Subs_country</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for mondelez_sub in mondelez_subs %}
-            <tr>
-                <td>{{ mondelez_sub.id }}</td>
-                <td>{{ mondelez_sub.subsId }}</td>
-                <td>{{ mondelez_sub.subsName }}</td>
-                <td>{{ mondelez_sub.subsCountry }}</td>
-                <td>
-                    <a href="{{ path('mondelez_subs_show', {'id': mondelez_sub.id}) }}">show</a>
-                    <a href="{{ path('mondelez_subs_edit', {'id': mondelez_sub.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="example-wrapper">
+    <h1>Hello Subs Page! </h1>
 
-    <a href="{{ path('mondelez_subs_new') }}">Create new</a>
+    {#{{ dump(subs[5].subsname) }}#}
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/paradise_search/src/Controller/MondelezSubsController.php'|file_link(0) }}">src/Controller/MondelezSubsController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/paradise_search/templates/mondelez_subs/index.html.twig'|file_link(0) }}">templates/mondelez_subs/index.html.twig</a></code></li>
+    </ul>
+</div>
 {% endblock %}
