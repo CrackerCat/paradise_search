@@ -18,11 +18,6 @@ class MondelezSubs
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $subs_id;
-
-    /**
      * @ORM\Column(type="string", length=50)
      */
     private $subs_name;
@@ -35,18 +30,6 @@ class MondelezSubs
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getSubsId(): ?int
-    {
-        return $this->subs_id;
-    }
-
-    public function setSubsId(int $subs_id): self
-    {
-        $this->subs_id = $subs_id;
-
-        return $this;
     }
 
     public function getSubsName(): ?string

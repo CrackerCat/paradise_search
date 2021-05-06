@@ -20,13 +20,6 @@ class APIController extends AbstractController
 
         $MondelezSubsNames = $resultatStatements->results->statements;
         $MondelezSubsCount = $resultatStatements->results->total_count;
-
-        // returns the raw content returned by the server (JSON in this case)
-        // $content = '{"id":521583, "name":"symfony-docs", ...}'
-        //dump($content);
-        //$contentStatements = $responseStatements->toArray();
-        // transforms the response JSON content into a PHP array
-        // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
         
 
         $resultat = $this->getResultApi('https://api.opencorporates.com/v0.4/companies/us_va/05501796?api_token=LndrOC38xehzcVPXfIfe&per_page=100');
@@ -49,7 +42,7 @@ class APIController extends AbstractController
         return new JsonResponse([
             'Mondelez_name' => $MondelezName,
             'Mondelez_country' => $MondelezCountry,
-            'Mondelez_subs' => $MondelezSubsNames,
+            'Mondelez_subs_names' => $MondelezSubsNames,
             'Mondelez_subs_count' => $MondelezSubsCount,
             'Mondelez_creation' => $MondelezCreation,
             'Mondelez_sanction' => $MondelezResultatSanctions,

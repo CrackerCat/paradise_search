@@ -16,13 +16,17 @@ use Symfony\Component\Routing\Annotation\Route;
 class MondelezSubsController extends AbstractController
 {
     /**
-     * @Route("/", name="mondelez_subs_index", methods={"GET"})
+     * @Route("/subs", name="mondelez_subs_index", methods={"GET"})
      */
     public function index(MondelezSubsRepository $mondelezSubsRepository): Response
     {
-        return $this->render('mondelez_subs/index.html.twig', [
+        //return $this->render('mondelez_subs/index.html.twig', [
+        //    'mondelez_subs' => $mondelezSubsRepository->findAll(),
+        //]);
+        return new JsonResponse([
             'mondelez_subs' => $mondelezSubsRepository->findAll(),
         ]);
+        
     }
 
     /**

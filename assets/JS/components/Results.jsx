@@ -22,6 +22,8 @@ export default class Results extends React.Component {
                 //'Mondelez_creation'
             ],
             MondelezSubsNames: [],
+            //MondelezSubs: [],
+            
         }
         // console.log(this.state);
 
@@ -101,9 +103,49 @@ export default class Results extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body filiales border-dark border-right border-top ">
-                                            {/* <p>{this.state.MondelezSubsNames}</p> */}
+                                    {/*{console.log(MondelezSubs)}*/}
+                                            {/*<p>{this.state.MondelezSubsNames}</p>*/}
                                             {/* <p>{subnames}</p> */}
-                                            {this.state.MondelezSubsNames.map(filliale => (<>
+                                            {/*{this.state.MondelezSubsNames.map(filliale => (<>
+                                                    <ul>
+                                                        
+                                                        {filliale.subs_country =='Switzerland' ||
+                                                        filliale.subs_country
+                                                        =='Netherlands' ||  
+                                                        filliale.subs_country
+                                                        =='Bermuda' ||  
+                                                        filliale.subs_country
+                                                        =='Cayman Islands' || 
+                                                        filliale.subs_country
+                                                        =='Singapour' || 
+                                                        filliale.subs_country
+                                                        =='Irland' || 
+                                                        filliale.subs_country
+                                                        =='Luxemburg' || 
+                                                        filliale.subs_country
+                                                        =='Curaçao' ||
+                                                        filliale.subs_country
+                                                        =='Hong Kong' ||
+                                                        filliale.subs_country
+                                                        =='Cyprus' ||
+                                                        filliale.subs_country
+                                                        =='Bahamas' ||
+                                                        filliale.subs_country
+                                                        =='Jersey' ||
+                                                        filliale.subs_country
+                                                        =='Barbados' ||
+                                                        filliale.subs_country
+                                                        =='Mauritius' ||
+                                                        filliale.subs_country
+                                                        =='British Virgin Islands'?
+                                                        <li>
+                                                            <p>{filliale.subs_name}</p>
+                                                            <p>{filliale.subs_country}</p>
+                                                        </li>
+                                                        :""}
+                                                    </ul>
+                                                </>))}*/}
+                                            {/*{this.state.MondelezSubsNames.map(filliale => (<>
                                                     <ul>
                                                         
                                                         {filliale.statement.properties.subsidiary.jurisdiction =='Switzerland' ||
@@ -141,9 +183,8 @@ export default class Results extends React.Component {
                                                         </li>
                                                         :""}
                                                     </ul>
-                                                </>))}
+                                                </>))}*/}
                                             
-                                                {/*<h2>Nombre de filiales parcourues : 100</h2>          */}
                                     </div>
                                 </div>
                             </div>
@@ -177,10 +218,11 @@ export default class Results extends React.Component {
                 this.setState({
                     MondelezName: response.Mondelez_name,
                     MondelezCountry: response.Mondelez_country,
-                    MondelezSubsNames: response.Mondelez_subs,
+                    MondelezSubsNames: response.Mondelez_subs_names,
                     MondelezSubsCount: response.Mondelez_subs_count,
                     MondelezCreation: response.Mondelez_creation,
                     MondelezResultatSanctions: response.Mondelez_sanction,
+                    //MondelezSubs: response.Mondelez_subs,
                 })
             })
         }
