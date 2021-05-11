@@ -14,23 +14,19 @@ export default class Results extends React.Component {
     constructor() {
         super();
         this.state = {
-            MondelezName: [
-                //'Mondelez_name',
-                //'Mondelez_country',
-                //'Mondelez_subs',
-                //'Mondelez_subs_count',
-                //'Mondelez_creation'
-            ],
+            MondelezName: [],
             MondelezSubsNames: [],
             MondelezSubs: [],
-            
         }
-        // console.log(this.state);
-
     }
 
     render() {
+        
 
+        //déterminer le nombre de filiales offshore de Mondelez :
+        const MondelezSubsLength = this.state.MondelezSubs.length;
+
+        //alternative to super() and this.state call above :
         // let subnames = null ;
         // if(this.state.MondelezSubsNames)
         // {
@@ -55,6 +51,7 @@ export default class Results extends React.Component {
                             <div className="col-md-8 mb-8">
                                 
                                     <div className="card-text p-3">
+                                        {/*Following presentation text from Wikipedia : https://fr.wikipedia.org/wiki/Mondel%C4%93z_International*/}
                                         <p>Mondelez International est une multinationale agroalimentaire américaine, particulièrement présente dans les secteurs du biscuit et du chocolat, qui est implantée dans de nombreux pays à travers le monde. Par le volume des ventes, il s'agit du deuxième acteur mondial du secteur agroalimentaire.</p>
                                     </div>
                                 
@@ -95,8 +92,7 @@ export default class Results extends React.Component {
                                     <div className="card-body border-dark border-top ">
                                         <img src={icon_world_y} alt="paradis fiscaux"/>
                                         <h4 className="card-title">Filiales | paradis fiscal</h4>
-                                        <h2 className="card-text">9</h2>
-                                        {/*<p className="card-text">{this.state.MondelezSubsCount}</p>  */}
+                                        <h2 className="card-text">{MondelezSubsLength}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -104,46 +100,16 @@ export default class Results extends React.Component {
                                 <div className="card h-100 border-0">
                                     <div className="card-body filiales border-dark border-right border-top ">
                                     
-                                            {/*<p>{this.state.MondelezSubsNames}</p>*/}
-                                            {/*<p>{this.state.MondelezSubs.subsname}</p>*/}
-                                            {/*{this.state.MondelezSubs.map(filliale => (<>
-                                                    <ul>
-                                                        {filliale.subscountry =='Switzerland' ||
-                                                        filliale.subscountry
-                                                        =='Netherlands' ||  
-                                                        filliale.subscountry
-                                                        =='Bermuda' ||  
-                                                        filliale.subscountry
-                                                        =='Cayman Islands' || 
-                                                        filliale.subscountry
-                                                        =='Singapour' || 
-                                                        filliale.subscountry
-                                                        =='Irland' || 
-                                                        filliale.subs_country
-                                                        =='Luxemburg' || 
-                                                        filliale.subscountry
-                                                        =='Curaçao' ||
-                                                        filliale.subscountry
-                                                        =='Hong Kong' ||
-                                                        filliale.subscountry
-                                                        =='Cyprus' ||
-                                                        filliale.subscountry
-                                                        =='Bahamas' ||
-                                                        filliale.subscountry
-                                                        =='Jersey' ||
-                                                        filliale.subscountry
-                                                        =='Barbados' ||
-                                                        filliale.subscountry
-                                                        =='Mauritius' ||
-                                                        filliale.subscountry
-                                                        =='British Virgin Islands'?
-                                                        <li>
-                                                            <p>{filliale.subsname}</p>
-                                                            <p>{filliale.subscountry}</p>
-                                                        </li>
-                                                        :""}
-                                                    </ul>
-                                                </>))}*/}
+                                        {/*showing the list of subsidiaries in tax havens*/}
+                                        {this.state.MondelezSubs.map(subs => (<>
+                                                <ul>
+                                                    <li>
+                                                        <p>{subs.subsname} : {subs.subscountry}</p>
+                                                    </li>
+                                                </ul>
+                                            </>))}
+
+                                            {/*alternative way to display data if data comes unfiltered from API*/}
                                             {/*{this.state.MondelezSubsNames.map(filliale => (<>
                                                     <ul>
                                                         
@@ -197,25 +163,27 @@ export default class Results extends React.Component {
                                 </div>
                             </div>
                         </div>       
-                    {/*</div>*/}
                 </div>
             </body>
         
         )}
 
+    //call the two fetch functions in order to get the data of our API (/api) and our database (mondelez/subs)
     componentDidMount() {
         this.fetchMondelez();
-        this.fetchMondelezSubs()
+        this.fetchMondelezSubs();
+
     }
-        
+    
+    //fetch the data brought to /api through our APIController
     fetchMondelez = () => {
         fetch(`http://localhost:8000/api`).then(response => response.json()).then(response => {
-                console.log(response);
+                //console.log(response);
             this.setState({
                 MondelezName: response.Mondelez_name,
                 MondelezCountry: response.Mondelez_country,
-                MondelezSubsNames: response.Mondelez_subs_names,
-                MondelezSubsCount: response.Mondelez_subs_count,
+                //MondelezSubsNames: response.Mondelez_subs_names,
+                //MondelezSubsCount: response.Mondelez_subs_count,
                 MondelezCreation: response.Mondelez_creation,
                 MondelezResultatSanctions: response.Mondelez_sanction,
                 //MondelezSubs: response.Mondelez_subs,
@@ -225,11 +193,31 @@ export default class Results extends React.Component {
         
     }
 
+    //fetch the data brought to /mondelez/subs from our PHPMyAdmin database
     fetchMondelezSubs = () => {
         fetch(`http://localhost:8000/mondelez/subs`).then(response => response.json()).then(response => {
-            console.log(response);
+            //console.log(response);
             this.setState({
-                MondelezSubs: response.Mondelez_subsname,
+                MondelezSubs: response.Mondelez_subs,
+                //MondelezSubsCountry : response.Mondelez_subscountry
             })
+            
         });
-    }};
+        
+    }
+
+    //displayMondelezSubs(){
+        
+    //        const row = [];
+    //        for (let i = 0; i < (this.state.MondelezSubs.length)-1; i++){
+                
+    //                row.push(<li><p>[this.state.MondelezSubs[i], this.state.MondelezSubs[i+1]]</p></li>);
+                
+    //        }
+    //        return row;
+        
+        
+    //}
+    
+};
+
