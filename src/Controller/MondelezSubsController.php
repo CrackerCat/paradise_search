@@ -28,37 +28,28 @@ class MondelezSubsController extends AbstractController
         $subsresult = $repository->findBy(array(
             'subscountry' => $taxhavens
         ), array(
-            'subsname' => 'Desc'
+            'subsname' => 'Desc',
         ));
         //dd($subsresult);
 
-        //creation of an array to put data from column subsname in  
-        $subsname = [];
+        //creation of an array to put the data in
+        $subsendresults = [];
         
         //feeding the newly created array with all the data from master array
         for ($i = 0; $i <= count($subsresult)-1; $i++) {
-            array_push($subsname, $subsresult[$i]->getSubsName());
+            $subspush = array('subsname' => $subsresult[$i]->getSubsName(), 'subscountry' => $subsresult[$i]->getSubsCountry());
+            array_push($subsendresults, $subspush);
         } 
-        
-        //creation of an array to put data from column subscountry in 
-        $subscountry = [];
-        
-        //feeding the newly created array with all the data from master array
-        for ($i = 0; $i <= count($subsresult)-1; $i++) {
-            array_push($subscountry, $subsresult[$i]->getSubsCountry());
-        }
-        
-        //dd($subsresult->getSubsName());
+        //dd($subsendresults);
 
         //alternative: to show the fetched data on the Twig page
         //return $this->render('mondelez_subs/index.html.twig', [
         //    'subs' => $subsname,
         //]);
         
-        //sending the data fetched from database to the page with url /mondelez/subs
+        //sending the data fetched from database to the url /mondelez/subs
         return new JsonResponse([
-            'Mondelez_subsname' => $subsname,
-            'Mondelez_subscountry' => $subscountry,
+            'Mondelez_subs' => $subsendresults
         ]);
     }
 }
