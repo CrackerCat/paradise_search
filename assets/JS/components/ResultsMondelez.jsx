@@ -1,9 +1,8 @@
 import React from "react";
-import { hostname } from "../jsenv"
-//import img from "../../../src/img/united-states.jpg"
 import '/assets/styles/app.css';
 import GraphCA from "./GraphCA";
 import Map from "./Map";
+import AgendaMondelez from "./AgendaMondelez";
 import logo_mondelez from "/Applications/MAMP/htdocs/paradise_search/src/img/Brand-Mondelez.svg";
 import icon_chart from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Chart.svg";
 import icon_world_y from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-World-Y.svg";
@@ -13,6 +12,7 @@ export default class Results extends React.Component {
 
     constructor() {
         super();
+
         this.state = {
             MondelezName: [],
             MondelezSubsNames: [],
@@ -21,12 +21,11 @@ export default class Results extends React.Component {
     }
 
     render() {
+
+        //In case number of subsidiaries has to be defined and put in a const : 
+        //const MondelezSubsLength = this.state.MondelezSubs.length;
         
-
-        //déterminer le nombre de filiales offshore de Mondelez :
-        const MondelezSubsLength = this.state.MondelezSubs.length;
-
-        //alternative to super() and this.state call above :
+        //Alternative to super() and this.state call above :
         // let subnames = null ;
         // if(this.state.MondelezSubsNames)
         // {
@@ -63,7 +62,7 @@ export default class Results extends React.Component {
                             <div className="card h-100 border-0">
                                 <div className="card-body border-dark border-right  border-bottom">
                                     <img  src={icon_chart} alt="chiffre d'affaire"/>
-                                    <h4 className="card-title">Chiffre d'affaire</h4>
+                                    <h4 className="card-title">Chiffre d'affaires 2020</h4>
                                     <h4 className="card-title">21 661 (M€)</h4>
                                 </div>
                             </div>
@@ -85,14 +84,13 @@ export default class Results extends React.Component {
                                 </div>
                             </div>
                         </div>
-                    <div/>   
-                    {/*<div className="row">  */}
+                    <div/>
                         <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-top ">
                                         <img src={icon_world_y} alt="paradis fiscaux"/>
                                         <h4 className="card-title">Filiales | paradis fiscal</h4>
-                                        <h2 className="card-text">{MondelezSubsLength}</h2>
+                                        <h2 className="card-text">{34}</h2>
                                     </div>
                                 </div>
                             </div>
@@ -100,55 +98,58 @@ export default class Results extends React.Component {
                                 <div className="card h-100 border-0">
                                     <div className="card-body filiales border-dark border-right border-top ">
                                     
-                                        {/*showing the list of subsidiaries in tax havens*/}
-                                        {this.state.MondelezSubs.map(subs => (<>
+                                        {/*Showing the list of subsidiaries in tax havens with pagination*/}
+                                        <AgendaMondelez/>
+                                    
+                                        {/*Alternative way to display data without pagination*/}
+                                        {/*{this.state.MondelezSubs.map(subs => (<>
                                                 <ul>
                                                     <li>
                                                         <p>{subs.subsname} : {subs.subscountry}</p>
                                                     </li>
                                                 </ul>
-                                            </>))}
+                                            </>))}*/}
 
-                                            {/*alternative way to display data if data comes unfiltered from API*/}
-                                            {/*{this.state.MondelezSubsNames.map(filliale => (<>
-                                                    <ul>
-                                                        
-                                                        {filliale.statement.properties.subsidiary.jurisdiction =='Switzerland' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Netherlands' ||  
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Bermuda' ||  
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Cayman Islands' || 
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Singapour' || 
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Irland' || 
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Luxemburg' || 
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Curaçao' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Hong Kong' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Cyprus' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Bahamas' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Jersey' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Barbados' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='Mauritius' ||
-                                                        filliale.statement.properties.subsidiary.jurisdiction
-                                                        =='British Virgin Islands'?
-                                                        <li>
-                                                            <p>{filliale.statement.properties.subsidiary.name}</p>
-                                                            <p>{filliale.statement.properties.subsidiary.jurisdiction}</p>
-                                                        </li>
-                                                        :""}
-                                                    </ul>
-                                                </>))}*/}
+                                        {/*Alternative way to display data if data comes unfiltered from API*/}
+                                        {/*{this.state.MondelezSubsNames.map(filliale => (<>
+                                                <ul>
+                                                    
+                                                    {filliale.statement.properties.subsidiary.jurisdiction =='Switzerland' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Netherlands' ||  
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Bermuda' ||  
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Cayman Islands' || 
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Singapour' || 
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Irland' || 
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Luxemburg' || 
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Curaçao' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Hong Kong' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Cyprus' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Bahamas' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Jersey' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Barbados' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='Mauritius' ||
+                                                    filliale.statement.properties.subsidiary.jurisdiction
+                                                    =='British Virgin Islands'?
+                                                    <li>
+                                                        <p>{filliale.statement.properties.subsidiary.name}</p>
+                                                        <p>{filliale.statement.properties.subsidiary.jurisdiction}</p>
+                                                    </li>
+                                                    :""}
+                                                </ul>
+                                            </>))}*/}
                                             
                                     </div>
                                 </div>
@@ -157,28 +158,33 @@ export default class Results extends React.Component {
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top ">
                                         <img src={icon_alert_g} alt="sanctions"/>
+                                        {/*To find out wether sanctions have been imposed on the company's subsidiaries, we reconciled the list 
+                                        of subsidiaries with the following OCCRPS's sanctions databases via OpenRefine:
+                                        FinCEN Enforcement Actions, World Bank Debarred Companies List, European External Action Service Sanctions,
+                                        HM Treasury Sanctions List, Sanctions imposed by Canada, Australian Foreign Sanctions, 
+                                        Kyrgyz FIU Sanctions List, United Nations Security Council Sanctions, Swiss SECO Sanctions
+                                        and Ukraine Sanctions.*/}
                                         <h4 className="card-title">Sanctions</h4>
                                         <p className="card-text">AUCUNE</p>  
                                     </div>
                                 </div>
                             </div>
-                        </div>       
+                        </div>
                 </div>
             </body>
-        
         )}
 
-    //call the two fetch functions in order to get the data of our API (/api) and our database (mondelez/subs)
+    //Call the two fetch functions in order to get the data of our API (via /api) and our database (via mondelez/subs)
     componentDidMount() {
         this.fetchMondelez();
         this.fetchMondelezSubs();
-
     }
     
-    //fetch the data brought to /api through our APIController
+    //Fetch the data brought to /api through our APIController
     fetchMondelez = () => {
         fetch(`http://localhost:8000/api`).then(response => response.json()).then(response => {
-                //console.log(response);
+            //to check wether the data is properly fetched :
+            //console.log(response);
             this.setState({
                 MondelezName: response.Mondelez_name,
                 MondelezCountry: response.Mondelez_country,
@@ -189,35 +195,17 @@ export default class Results extends React.Component {
                 //MondelezSubs: response.Mondelez_subs,
             })
         });
-    
-        
     }
 
     //fetch the data brought to /mondelez/subs from our PHPMyAdmin database
     fetchMondelezSubs = () => {
         fetch(`http://localhost:8000/mondelez/subs`).then(response => response.json()).then(response => {
+            //to check wether the data is properly fetched :
             //console.log(response);
             this.setState({
                 MondelezSubs: response.Mondelez_subs,
-                //MondelezSubsCountry : response.Mondelez_subscountry
             })
-            
         });
-        
     }
-
-    //displayMondelezSubs(){
-        
-    //        const row = [];
-    //        for (let i = 0; i < (this.state.MondelezSubs.length)-1; i++){
-                
-    //                row.push(<li><p>[this.state.MondelezSubs[i], this.state.MondelezSubs[i+1]]</p></li>);
-                
-    //        }
-    //        return row;
-        
-        
-    //}
-    
 };
 
