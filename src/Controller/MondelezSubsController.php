@@ -28,8 +28,9 @@ class MondelezSubsController extends AbstractController
         //TEMPORARY SOLUTION BEFORE IMPLMENTING CORRECT PAGINATION WITH CURRENTPAGE TRANSFERRED FROM AGENDA COMPONENT VIA GET
         //
         
-        //filtering the fetched data from database with tax haven list and ordering them alphabetically
-        $subsresultOne = $repository->findBy(array(
+        //filtering the fetched data from database with 
+        //tax haven list and ordering them alphabetically
+        $subsresultsOne = $repository->findBy(array(
             'subscountry' => $taxhavens
         ), array(
             'subsname' => 'Desc',
@@ -39,14 +40,14 @@ class MondelezSubsController extends AbstractController
         $subsendresultsOne = [];
         
         //feeding the newly created array with all the data from master array
-        for ($i = 0; $i <= count($subsresultOne)-1; $i++) {
-            $subspush = array('subsname' => $subsresultOne[$i]->getSubsName(), 'subscountry' => $subsresultOne[$i]->getSubsCountry());
+        for ($i = 0; $i <= count($subsresultsOne)-1; $i++) {
+            $subspush = array('subsname' => $subsresultsOne[$i]->getSubsName(), 'subscountry' => $subsresultsOne[$i]->getSubsCountry());
             array_push($subsendresultsOne, $subspush);
         } 
 
-
-
-        $subsresultTwo = $repository->findBy(array(
+        //filtering the fetched data from database with 
+        //tax haven list and ordering them alphabetically
+        $subsresultsTwo = $repository->findBy(array(
             'subscountry' => $taxhavens
         ), array(
             'subsname' => 'Desc',
@@ -56,13 +57,14 @@ class MondelezSubsController extends AbstractController
         $subsendresultsTwo = [];
         
         //feeding the newly created array with all the data from master array
-        for ($i = 0; $i <= count($subsresultTwo)-1; $i++) {
-            $subspush = array('subsname' => $subsresultTwo[$i]->getSubsName(), 'subscountry' => $subsresultTwo[$i]->getSubsCountry());
+        for ($i = 0; $i <= count($subsresultsTwo)-1; $i++) {
+            $subspush = array('subsname' => $subsresultsTwo[$i]->getSubsName(), 'subscountry' => $subsresultsTwo[$i]->getSubsCountry());
             array_push($subsendresultsTwo, $subspush);
         } 
 
-
-        $subsresultThree = $repository->findBy(array(
+        //filtering the fetched data from database with 
+        //tax haven list and ordering them alphabetically
+        $subsresultsThree = $repository->findBy(array(
             'subscountry' => $taxhavens
         ), array(
             'subsname' => 'Desc',
@@ -72,13 +74,14 @@ class MondelezSubsController extends AbstractController
         $subsendresultsThree = [];
         
         //feeding the newly created array with all the data from master array
-        for ($i = 0; $i <= count($subsresultThree)-1; $i++) {
-            $subspush = array('subsname' => $subsresultThree[$i]->getSubsName(), 'subscountry' => $subsresultThree[$i]->getSubsCountry());
+        for ($i = 0; $i <= count($subsresultsThree)-1; $i++) {
+            $subspush = array('subsname' => $subsresultsThree[$i]->getSubsName(), 'subscountry' => $subsresultsThree[$i]->getSubsCountry());
             array_push($subsendresultsThree, $subspush);
         } 
 
-
-        $subsresultFour = $repository->findBy(array(
+        //filtering the fetched data from database with 
+        //tax haven list and ordering them alphabetically
+        $subsresultsFour = $repository->findBy(array(
             'subscountry' => $taxhavens
         ), array(
             'subsname' => 'Desc',
@@ -89,8 +92,8 @@ class MondelezSubsController extends AbstractController
         $subsendresultsFour = [];
         
         //feeding the newly created array with all the data from master array
-        for ($i = 0; $i <= count($subsresultFour)-1; $i++) {
-            $subspush = array('subsname' => $subsresultFour[$i]->getSubsName(), 'subscountry' => $subsresultFour[$i]->getSubsCountry());
+        for ($i = 0; $i <= count($subsresultsFour)-1; $i++) {
+            $subspush = array('subsname' => $subsresultsFour[$i]->getSubsName(), 'subscountry' => $subsresultsFour[$i]->getSubsCountry());
             array_push($subsendresultsFour, $subspush);
         } 
         //dd($subsendresults);
