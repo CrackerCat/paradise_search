@@ -2,7 +2,7 @@ import React from 'react';
 import '/assets/styles/app.css';
 import icon_glass from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Glass.svg";
 import icon_dress from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Dress.svg";
-import icon_energy from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Energy.svg";
+//import icon_energy from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Energy.svg";
 import icon_rocket from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Rocket.svg";
 import icon_sport from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Sport.svg";
 import icon_strawler from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Strawler.svg";
@@ -27,7 +27,7 @@ export default class HomeSelect extends React.Component {
                                 <h5 class="CatHomeSelect">Agro-alimentaire</h5>
                                     <div class="card-footer">
                                         <input class="InputHomeSelect" type="reset" value="Boissons" />
-                                        <a href="HomeBrands"><input class="InputHomeSelect" type="reset" value="Epicerie" /></a>
+                                        <a href="BrandsEpicerie"><input class="InputHomeSelect" type="reset" value="Epicerie" /></a>
                                         <input class="InputHomeSelect" type="reset" value="Produits laitiers" />
                                     </div>
                             </div>
@@ -54,9 +54,9 @@ export default class HomeSelect extends React.Component {
                                 <img class="imgHomeSelect" src={icon_clean} alt="beauté et produits d'entretien"/>
                                 <h5 class="CatHomeSelect">Beauté et entretien</h5> 
                                     <div class="card-footer">
-                                        <input class="InputHomeSelect" type="reset" value="Entretien"/>
-                                        <input class="InputHomeSelect" type="reset" value="Cosmétique"/>
-                                        <input class="InputHomeSelect" type="reset" value="Douche"/>
+                                        <a href="BrandsEntretien"><input class="InputHomeSelect" type="reset" value="Entretien"/></a>
+                                        <a href="BrandsCosmetique"><input class="InputHomeSelect" type="reset" value="Cosmétique"/></a>
+                                        <a href="BrandsDouche"><input class="InputHomeSelect" type="reset" value="Douche"/></a>
                                     </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ export default class HomeSelect extends React.Component {
                                 <img class="imgHomeSelect" src={icon_strawler} alt="bébé"/>
                                 <h5 class="CatHomeSelect">Bébé</h5>
                                     <div class="card-footer">
-                                        <input class="InputHomeSelect" type="reset" value="Couches" />
+                                        <a href="BrandsBebe"><input class="InputHomeSelect" type="reset" value="Couches"/></a>
                                         <input class="InputHomeSelect" type="reset" value="Nourriture" />
                                         <input class="InputHomeSelect" type="reset" value="Accessoires" />
                                     </div> 
