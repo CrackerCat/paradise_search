@@ -5,7 +5,7 @@ import * as am4core from "@amcharts/amcharts4/core";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import am4themes_kelly from "@amcharts/amcharts4/themes/kelly";
 
-export default class GraphCA extends React.Component {
+export default class GraphCAMondelez extends React.Component {
   
   
   componentDidMount() {  
