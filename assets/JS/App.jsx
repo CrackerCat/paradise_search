@@ -3,8 +3,13 @@ import Disclaimer from "./components/Disclaimer"
 import HomeSelect from "./components/HomeSelect"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Results from "./components/Results";
-import HomeBrands from "./components/HomeBrands"
+import ResultsMondelez from "./components/ResultsMondelez"
+import ResultsProcterGamble from "./components/ResultsProcterGamble"
+import BrandsEpicerie from "./components/BrandsEpicerie"
+import BrandsEntretien from "./components/BrandsEntretien"
+import BrandsDouche from "./components/BrandsDouche"
+import BrandsCosmetique from "./components/BrandsCosmetique"
+import BrandsBebe from "./components/BrandsBebe"
 import TermsOfUse from "./components/TermsOfUse"
 import About from "./components/About"
 import {
@@ -28,8 +33,20 @@ export default class App extends React.Component {
             <Route path='/HomeSelect' exact>
               <HomeSelect/>
             </Route>
-            <Route path='/HomeBrands'>
-              <HomeBrands/>
+            <Route path='/BrandsEpicerie'>
+              <BrandsEpicerie/>
+            </Route>
+            <Route path='/BrandsEntretien'>
+              <BrandsEntretien/>
+            </Route>
+            <Route path='/BrandsDouche'>
+              <BrandsDouche/>
+            </Route>
+            <Route path='/BrandsCosmetique'>
+              <BrandsCosmetique/>
+            </Route>
+            <Route path='/Brandsbebe'>
+              <BrandsBebe/>
             </Route>
             <Route path='/About'>
               <About/>
@@ -37,8 +54,11 @@ export default class App extends React.Component {
             <Route path='/TermsOfUse'>
               <TermsOfUse/>
             </Route>
-            <Route path='/Results'>
-              <Results/>
+            <Route path='/ResultsMondelez'>
+              <ResultsMondelez/>
+            </Route>
+            <Route path='/ResultsProcterGamble'>
+              <ResultsProcterGamble/>
             </Route>
           </Switch>
           {<Footer/>}
