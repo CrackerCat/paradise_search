@@ -31,12 +31,11 @@ class APIController extends AbstractController
 
         $MondelezSanctions = $this->getResultApi('https://aleph.occrp.org/api/2/collections/1306?filter:schema=LegalEntity');
 
-        $MondelezResultatSanctions = $MondelezSanctions->statistics->schema->values->Sanction;
+        $MondelezResultatSanctions = $MondelezSanctions->statistics->names->values;
 
-        // dd($MondelezSanctions);
+        //dd($MondelezSanctions);
 
         // dd($resultatCompany);
-        //dd($MondelezCompanySanctionsCheck);
 
         //return $this->render('api/index.html.twig', [
         return new JsonResponse([
