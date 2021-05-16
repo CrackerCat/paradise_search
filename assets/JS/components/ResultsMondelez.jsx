@@ -1,6 +1,6 @@
 import React from "react";
 import '/assets/styles/app.css';
-import GraphCA from "./GraphCA";
+import GraphCAMondelez from "./GraphCAMondelez";
 import Map from "./Map";
 import AgendaMondelez from "./AgendaMondelez";
 import logo_mondelez from "/Applications/MAMP/htdocs/paradise_search/src/img/Brand-Mondelez.svg";
@@ -8,7 +8,7 @@ import icon_chart from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-C
 import icon_world_y from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-World-Y.svg";
 import icon_alert_g from "/Applications/MAMP/htdocs/paradise_search/src/img/Icon-Alert-G.svg";
 
-export default class Results extends React.Component {
+export default class ResultsMondelez extends React.Component {
 
     constructor() {
         super();
@@ -71,7 +71,7 @@ export default class Results extends React.Component {
                         <div className="col-md-4 p-0">
                             <div className="card h-100 border-0">
                                 <div className="card-body border-dark border-right border-left border-bottom">
-                                    <GraphCA/>
+                                    <GraphCAMondelez/>
                                 </div>
                             </div>
                         </div>
