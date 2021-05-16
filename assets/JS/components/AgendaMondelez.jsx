@@ -1,10 +1,5 @@
 import React from 'react';
 
-/*
- * Thanks to Maxime Pie for helping out with this piece of code 
-> https://github.com/MaximePie/
- */
-
 export default class AgendaMondelez extends React.Component {
 
   constructor() {
@@ -17,6 +12,8 @@ export default class AgendaMondelez extends React.Component {
 
     this.fetchEventsOne = this.fetchEventsOne.bind(this);
     this.fetchEventsTwo = this.fetchEventsTwo.bind(this);
+    this.fetchEventsThree = this.fetchEventsTwo.bind(this);
+    this.fetchEventsFour = this.fetchEventsTwo.bind(this);
   }
 
   /**
