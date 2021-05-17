@@ -24,21 +24,21 @@ export default class BrandsCosmetique extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_braun}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_braun}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_fluocaril}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_fluocaril}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_gillette}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_gillette}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -46,21 +46,21 @@ export default class BrandsCosmetique extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-bottom border-right border-top">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_oralb}/></a> 
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_oralb}/></a> 
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-bottom border-right border-top border-left">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_always}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_always}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-left border-bottom border-top">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_tampax}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_tampax}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -68,21 +68,21 @@ export default class BrandsCosmetique extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_vicks}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_vicks}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-top">
-                                        {/*<a href="ResultsProcterGamble"><img className="imgBrandHollywood" src={logo_hollywood}/></a>*/}
+                                        {/*<a href="ProcterGamble"><img className="imgBrandHollywood" src={logo_hollywood}/></a>*/}
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top ">
-                                        {/*<a href="ResultsProcterGamble"><img className="imgBrand" src={logo_cotedor}/></a>*/}
+                                        {/*<a href="ProcterGamble"><img className="imgBrand" src={logo_cotedor}/></a>*/}
                                     </div>
                                 </div>
                             </div>
@@ -93,21 +93,21 @@ export default class BrandsCosmetique extends React.Component {
                             {/*<div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_daim}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_daim}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-top border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrandHollywood" src={logo_hollywood}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrandHollywood" src={logo_hollywood}/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
-                                        <a href="ResultsProcterGamble"><img className="imgBrand" src={logo_cotedor}/></a>
+                                        <a href="ProcterGamble"><img className="imgBrand" src={logo_cotedor}/></a>
                                     </div>
                                 </div>
                             </div>*/}

@@ -35,7 +35,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrandLu" src={logo_lu}/></a>
+                                        <a href="Mondelez"><img className="imgBrandLu" src={logo_lu}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_prince}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_prince}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_pepito}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_pepito}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_milka}/></a> 
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_milka}/></a> 
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom border-left">
-                                        <a href="ResultsMondelez"><img className="imgBrandLine" src={logo_toblerone}/></a> 
+                                        <a href="Mondelez"><img className="imgBrandLine" src={logo_toblerone}/></a> 
                                     </div>
                                 </div>
                             </div>
@@ -75,14 +75,14 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_oreo}/></a> 
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_oreo}/></a> 
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrandStimorol" src={logo_stimorol}/></a> 
+                                        <a href="Mondelez"><img className="imgBrandStimorol" src={logo_stimorol}/></a> 
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom border-left">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_belin}/></a> 
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_belin}/></a> 
                                     </div>
                                 </div>
                             </div>
@@ -98,14 +98,14 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_vosgienne}/></a> 
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_vosgienne}/></a> 
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_daim}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_daim}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrandHollywood" src={logo_hollywood}/></a>
+                                        <a href="Mondelez"><img className="imgBrandHollywood" src={logo_hollywood}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_cotedor}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_cotedor}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top">
-                                        <a href="ResultsMondelez"><img className="imgBrandBrun" src={logo_brun}/></a>
+                                        <a href="Mondelez"><img className="imgBrandBrun" src={logo_brun}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-top">
-                                        <a href="ResultsMondelez"><img className="imgBrandTuc" src={logo_tuc}/></a>
+                                        <a href="Mondelez"><img className="imgBrandTuc" src={logo_tuc}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@ export default class BrandsEpicerie extends React.Component {
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top">
-                                        <a href="ResultsMondelez"><img className="imgBrand" src={logo_cachou}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_cachou}/></a>
                                     </div>
                                 </div>
                             </div>
