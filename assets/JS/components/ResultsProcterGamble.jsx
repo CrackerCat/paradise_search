@@ -1,6 +1,6 @@
 import React from "react";
 import '/assets/styles/app.css';
-import GraphCA from "./GraphCAMondelez";
+import GraphCAProcterGamble from "./GraphCAProcterGamble";
 import MapProcterGamble from "./MapProcterGamble";
 import AgendaProcterGamble from "./AgendaProcterGamble";
 import logo_proctergamble from "/Applications/MAMP/htdocs/paradise_search/src/img/P&G_Logo_SVG.svg.png";
@@ -69,7 +69,7 @@ export default class ResultsProcterGamble extends React.Component {
                         <div className="col-md-4 p-0">
                             <div className="card h-100 border-0">
                                 <div className="card-body border-dark border-right border-left border-bottom">
-                                    <GraphCA/>
+                                    <GraphCAProcterGamble/>
                                 </div>
                             </div>
                         </div>
