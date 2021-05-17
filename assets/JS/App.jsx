@@ -54,10 +54,10 @@ export default class App extends React.Component {
             <Route path='/TermsOfUse'>
               <TermsOfUse/>
             </Route>
-            <Route path='/ResultsMondelez'>
+            <Route path='/Mondelez'>
               <ResultsMondelez/>
             </Route>
-            <Route path='/ResultsProcterGamble'>
+            <Route path='/ProcterGamble'>
               <ResultsProcterGamble/>
             </Route>
           </Switch>
