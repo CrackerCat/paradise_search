@@ -44,9 +44,9 @@ export default class AgendaProcterGamble extends React.Component {
             </section>
 
             <div>
-                <button onClick={() => this.fetchEventsThree(3)}>3</button>
-                <button onClick={() => this.fetchEventsTwo(2)}>2</button>
-                <button onClick={() => this.fetchEventsOne(1)}>1</button>
+                <button className="agendabutton" onClick={() => this.fetchEventsThree(3)}>3</button>
+                <button className="agendabutton" onClick={() => this.fetchEventsTwo(2)}>2</button>
+                <button className="agendabutton" onClick={() => this.fetchEventsOne(1)}>1</button>
             </div>
             {/*Optional: button to trigger fetch function :*/}
             {/*<button onClick={this.fetchEvents}>Fetch Subs</button>*/}
