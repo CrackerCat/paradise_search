@@ -12,8 +12,8 @@ export default class AgendaMondelez extends React.Component {
 
     this.fetchEventsOne = this.fetchEventsOne.bind(this);
     this.fetchEventsTwo = this.fetchEventsTwo.bind(this);
-    this.fetchEventsThree = this.fetchEventsTwo.bind(this);
-    this.fetchEventsFour = this.fetchEventsTwo.bind(this);
+    this.fetchEventsThree = this.fetchEventsThree.bind(this);
+    this.fetchEventsFour = this.fetchEventsFour.bind(this);
   }
 
   /**
@@ -45,10 +45,10 @@ export default class AgendaMondelez extends React.Component {
         </section>
 
         <div>
-          <button onClick={() => this.fetchEventsFour(4)}>4</button>
-          <button onClick={() => this.fetchEventsThree(3)}>3</button>
-          <button onClick={() => this.fetchEventsTwo(2)}>2</button>
-          <button onClick={() => this.fetchEventsOne(1)}>1</button>
+          <button className="agendabutton" onClick={() => this.fetchEventsFour(4)}>4</button>
+          <button className="agendabutton" onClick={() => this.fetchEventsThree(3)}>3</button>
+          <button className="agendabutton" onClick={() => this.fetchEventsTwo(2)}>2</button>
+          <button className="agendabutton" onClick={() => this.fetchEventsOne(1)}>1</button>
           
           {/*Optional: button to trigger fetch function :*/}
           {/*<button onClick={this.fetchEvents}>Fetch Subs</button>*/}
