@@ -7,7 +7,6 @@ import am4themes_kelly from "@amcharts/amcharts4/themes/kelly";
 
 export default class GraphCAMondelez extends React.Component {
   
-  
   componentDidMount() {  
     // Apply chart themes
     am4core.useTheme(am4themes_animated);
@@ -16,26 +15,20 @@ export default class GraphCAMondelez extends React.Component {
     // Create chart instance
     var chart = am4core.create("chartdivgraph", am4charts.XYChart3D);
 
-
     // Add data
     chart.data = [{
       "year": "2018",
       "CA": 22653,
-      
     }, {
       "year": "2019",
       "CA": 23026,
-    
     }, {
       "year": "2020",
       "CA": 21661,
-    
     }];
 
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "year";
- 
-
 
     var  valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
     //valueAxis.title.text = "Chiffre d'affaires (Millions d'€)";
