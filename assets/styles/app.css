@@ -383,21 +383,20 @@ text-align: inherit;
 text-align: -webkit-match-parent;
 }
 
-
-
-
 button {
 border-radius: 0;
 }
 
 button.agendabutton{
-    border-radius: 60%;
+    height: 29px !important;
+    width: 29px !important;
+    border-radius: 50% !important;
     background-color: black;
     color: white;
-    -webkit-border-radius: 60%;
-    -moz-border-radius: 60%;
-    -ms-border-radius: 60%;
-    -o-border-radius: 60%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
 }
 
 button:focus {
@@ -4229,7 +4228,8 @@ width: 1.5em;
 height: 1.5em;
 vertical-align: middle;
 content: "";
-background: no-repeat center center;
+background: no-repeat cent
+er center;
 background-size: 100% 100%;
 }
 
