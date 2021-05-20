@@ -5,7 +5,9 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import ResultsMondelez from "./components/ResultsMondelez"
 import ResultsProcterGamble from "./components/ResultsProcterGamble"
+import ResultsPepsiCo from "./components/ResultsPepsiCo"
 import BrandsEpicerie from "./components/BrandsEpicerie"
+import BrandsBoissons from "./components/BrandsBoissons"
 import BrandsEntretien from "./components/BrandsEntretien"
 import BrandsDouche from "./components/BrandsDouche"
 import BrandsCosmetique from "./components/BrandsCosmetique"
@@ -45,8 +47,11 @@ export default class App extends React.Component {
             <Route path='/BrandsCosmetique'>
               <BrandsCosmetique/>
             </Route>
-            <Route path='/Brandsbebe'>
+            <Route path='/BrandsBebe'>
               <BrandsBebe/>
+            </Route>
+            <Route path='/BrandsBoissons'>
+              <BrandsBoissons/>
             </Route>
             <Route path='/About'>
               <About/>
@@ -59,6 +64,9 @@ export default class App extends React.Component {
             </Route>
             <Route path='/ProcterGamble'>
               <ResultsProcterGamble/>
+            </Route>
+            <Route path='/Pepsico'>
+              <ResultsPepsiCo/>
             </Route>
           </Switch>
           {<Footer/>}
