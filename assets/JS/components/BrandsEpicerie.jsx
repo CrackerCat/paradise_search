@@ -18,6 +18,11 @@ import logo_belin from "/Applications/MAMP/htdocs/paradise_search/src/img/brands
 import logo_tuc from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Tuc.png";
 import logo_brun from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Brun.png";
 import logo_cachou from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Cachou.png";
+import logo_benenuts from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Benenuts-PC.svg";
+import logo_doritos from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Doritos-PC.svg";
+import logo_lays from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Lays-PC.svg";
+import logo_quaker from "/Applications/MAMP/htdocs/paradise_search/src/img/brands_epicerie/Brand-Quaker-PC.svg";
+
 
 export default class BrandsEpicerie extends React.Component {
     render() {
@@ -31,6 +36,7 @@ export default class BrandsEpicerie extends React.Component {
                                 <h5>Epicerie : Sélectionnez la marque de votre choix.</h5>
                             </div>
                         </div>
+                        
                         <div className="row p-4">
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
@@ -39,15 +45,13 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                                    
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-bottom">
-                                        <a href="Mondelez"><img className="imgBrand" src={logo_prince}/></a>
+                                        <a href="PepsiCo"><img className="imgBrand" src={logo_benenuts}/></a>
                                     </div>
                                 </div>
                             </div>
-                                    
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-bottom">
@@ -55,15 +59,14 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                                    
+
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
-                                        <a href="Mondelez"><img className="imgBrand" src={logo_milka}/></a> 
+                                        <a href="PepsiCo"><img className="imgBrand" src={logo_lays}/></a> 
                                     </div>
                                 </div>
                             </div>
-
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom border-left">
@@ -71,14 +74,14 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
-                                        <a href="Mondelez"><img className="imgBrand" src={logo_oreo}/></a> 
+                                        <a href="PepsiCo"><img className="imgBrand" src={logo_doritos}/></a> 
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
@@ -86,7 +89,6 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom border-left">
@@ -94,7 +96,6 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
@@ -102,6 +103,7 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-top border-bottom">
@@ -109,7 +111,6 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                                    
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-right border-left border-top border-bottom">
@@ -117,7 +118,6 @@ export default class BrandsEpicerie extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                                    
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top border-bottom">
@@ -128,24 +128,44 @@ export default class BrandsEpicerie extends React.Component {
 
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
-                                    <div className="card-body border-dark border-right border-top">
+                                    <div className="card-body border-dark border-right border-top border-bottom">
                                         <a href="Mondelez"><img className="imgBrandBrun" src={logo_brun}/></a>
                                     </div>
                                 </div>
                             </div>
-                                    
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
-                                    <div className="card-body border-dark border-right border-left border-top">
-                                        <a href="Mondelez"><img className="imgBrandTuc" src={logo_tuc}/></a>
+                                    <div className="card-body border-dark border-right border-left border-top border-bottom">
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_milka}/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
+                                    <div className="card-body border-dark border-left border-top border-bottom">
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_cachou}/></a>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="col-md-4 p-0">
                                 <div className="card h-100 border-0">
+                                    <div className="card-body border-dark border-right border-top">
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_oreo}/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
+                                    <div className="card-body border-dark border-right border-left border-top">
+                                        <a href="PepsiCo"><img className="imgBrand" src={logo_quaker}/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4 p-0">
+                                <div className="card h-100 border-0">
                                     <div className="card-body border-dark border-left border-top">
-                                        <a href="Mondelez"><img className="imgBrand" src={logo_cachou}/></a>
+                                        <a href="Mondelez"><img className="imgBrand" src={logo_prince}/></a>
                                     </div>
                                 </div>
                             </div>
