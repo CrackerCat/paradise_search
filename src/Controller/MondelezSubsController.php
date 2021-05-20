@@ -22,16 +22,30 @@ class MondelezSubsController extends AbstractController
         $repository = $entityManager->getRepository(MondelezSubs::class);
 
         //list of tax havens, to use as filter for fetched data (as listed by Oxfam here https://www.oxfamfrance.org/communiques-de-presse/liste-noire-des-paradis-fiscaux-lunion-europeenne-doit-faire-pression-sur-les-pays-les-plus-nocifs/)
-        $taxhavens = ['Panama', 'Netherlands', 'Switzerland', 'Bermuda', 'Cayman Islands', 'Singapour', 'Irland','Luxemburg', 'Curaçao', 'Hong Kong', 'Cyprus', 'Bahamas', 'Jersey', 'Barbados', 'Mauritius', 'British Virgin Islands'];
+        $taxhavensOxfam = ['Panama', 'Netherlands', 'Switzerland', 'Bermuda', 'Cayman Islands', 'Singapour', 'Irland','Luxemburg', 'Curaçao', 'Hong Kong', 'Cyprus', 'Bahamas', 'Jersey', 'Barbados', 'Mauritius', 'British Virgin Islands'];
+        
+        //list of tax havens, to use as filter for fetched data (as listed by Oxfam here https://www.oxfamfrance.org/communiques-de-presse/liste-noire-des-paradis-fiscaux-lunion-europeenne-doit-faire-pression-sur-les-pays-les-plus-nocifs/)
+        $taxhavensEU = ['American Samoa', 'Anguilla', 'Dominica', 'Fiji', 'Guam', 'Palau', 'Panama', 'Samoa', 'Seychelles', 'Trinidad and Tobago', 'US Virgin Islands', 'Vanuatu'];
         
         //
         //TEMPORARY SOLUTION BEFORE IMPLMENTING CORRECT PAGINATION WITH CURRENTPAGE TRANSFERRED FROM AGENDA COMPONENT VIA GET
         //
         
         //filtering the fetched data from database with 
+        //EU tax haven list and ordering them alphabetically
+        //$subsresultEU = $repository->findBy(array(
+        //    'subscountry' => $taxhavensEU
+        //), array(
+        //    'subsname' => 'Desc',
+        //));
+
+        //dd($subsresultEU);
+        //returns 1 subsidiary
+
+        //filtering the fetched data from database with 
         //tax haven list and ordering them alphabetically
         $subsresultsOne = $repository->findBy(array(
-            'subscountry' => $taxhavens
+            'subscountry' => $taxhavensOxfam
         ), array(
             'subsname' => 'Desc',
         ), 10, 0);
@@ -48,7 +62,7 @@ class MondelezSubsController extends AbstractController
         //filtering the fetched data from database with 
         //tax haven list and ordering them alphabetically
         $subsresultsTwo = $repository->findBy(array(
-            'subscountry' => $taxhavens
+            'subscountry' => $taxhavensOxfam
         ), array(
             'subsname' => 'Desc',
         ), 10, 10);
@@ -65,7 +79,7 @@ class MondelezSubsController extends AbstractController
         //filtering the fetched data from database with 
         //tax haven list and ordering them alphabetically
         $subsresultsThree = $repository->findBy(array(
-            'subscountry' => $taxhavens
+            'subscountry' => $taxhavensOxfam
         ), array(
             'subsname' => 'Desc',
         ), 10, 20);
@@ -82,7 +96,7 @@ class MondelezSubsController extends AbstractController
         //filtering the fetched data from database with 
         //tax haven list and ordering them alphabetically
         $subsresultsFour = $repository->findBy(array(
-            'subscountry' => $taxhavens
+            'subscountry' => $taxhavensOxfam
         ), array(
             'subsname' => 'Desc',
         ), 10, 30);
