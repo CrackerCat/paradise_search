@@ -4719,11 +4719,6 @@ border-bottom-left-radius: calc(0.25rem - 1px);
 margin-bottom: 15px;
 }
 
-rect{
-    background-color:#f4f4e4;
-    fill: #f4f4e4;
-}
-
 @media (min-width: 576px) {
 .card-deck {
     display: -ms-flexbox;

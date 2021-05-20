@@ -28,7 +28,7 @@ export default class HomeSelect extends React.Component {
                                     <div class="card-footer">
                                         <a href="BrandsBoissons"><input class="InputHomeSelect" type="reset" value="Boissons" /></a>
                                         <a href="BrandsEpicerie"><input class="InputHomeSelect" type="reset" value="Epicerie" /></a>
-                                        <input class="InputHomeSelect" type="reset" value="Produits laitiers" />
+                                        <input class="InputHomeSelect" type="reset" value="Laitages" />
                                     </div>
                             </div>
                         </div>
