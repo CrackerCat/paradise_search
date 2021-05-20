@@ -26,7 +26,7 @@ export default class HomeSelect extends React.Component {
                                 <img class="imgHomeSelect" src={icon_glass} alt="agro-alimentaire"/> 
                                 <h5 class="CatHomeSelect">Agro-alimentaire</h5>
                                     <div class="card-footer">
-                                        <input class="InputHomeSelect" type="reset" value="Boissons" />
+                                        <a href="BrandsBoissons"><input class="InputHomeSelect" type="reset" value="Boissons" /></a>
                                         <a href="BrandsEpicerie"><input class="InputHomeSelect" type="reset" value="Epicerie" /></a>
                                         <input class="InputHomeSelect" type="reset" value="Produits laitiers" />
                                     </div>
