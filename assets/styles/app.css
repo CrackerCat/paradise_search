@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Lacrima";
+    src: url("/Applications/MAMP/htdocs/paradise_search/assets/styles/LacrimaSerif-Bold.otf");
+}
+
 :root {
 --blue: #007bff;
 --indigo: #6610f2;
@@ -25,7 +30,7 @@
 --breakpoint-md: 768px;
 --breakpoint-lg: 992px;
 --breakpoint-xl: 1200px;
---font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+--font-family-sans-serif: "-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"";
 --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -41,9 +46,9 @@ box-sizing: border-box;
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-  }
-  
-  .user {
+}
+
+.user {
     border: 2px solid black;
     border-radius: 10px;
     background-color: #b3e3ff;
@@ -54,39 +59,39 @@ box-sizing: border-box;
     width: 500px;
     height: 300px;
     margin: 20px;
-  }
-  
-  .paginationBttns {
+}
+
+.paginationBttns {
     width: 80%;
     height: 40px;
     list-style: none;
     display: flex;
     justify-content: center;
-  }
-  
-  .paginationBttns a {
+}
+
+.paginationBttns a {
     padding: 10px;
     margin: 8px;
     border-radius: 5px;
     border: 1px solid #2b2eff;
     color: #2b2eff;
     cursor: pointer;
-  }
-  
-  .paginationBttns a:hover {
+}
+
+.paginationBttns a:hover {
     color: white;
     background-color: #2b2eff;
-  }
-  
-  .paginationActive a {
+}
+
+.paginationActive a {
     color: white;
     background-color: #2b2eff;
-  }
-  
-  .paginationDisabled a {
+}
+
+.paginationDisabled a {
     color: grey;
     background-color: grey;
-  }
+}
 
 #chartdiv {
 width: 80%;
@@ -144,7 +149,7 @@ height: 100%;
 }*/
 html, div {
 background-color: #e7e9d2;
-font-family: sans-serif;
+font-family: "Lacrima";
 line-height: 1.15;
 -webkit-text-size-adjust: 100%;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -176,12 +181,23 @@ Header{
 }
 
 .CatHomeSelect{
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .InputHomeSelect{
     width: 100%;
-    background-color: rgb(106, 134, 120);
+    background-color: rgb(139, 168, 153);
+    text-transform: uppercase;
+    /*border: none;
+    */border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+.InputHomeSelect:hover{
+    color: #feed00;
 }
 
 .titreHome{
@@ -231,14 +247,15 @@ a.aNavbar{
 
 a.aNavbar:last-child{
     padding-right: 0;
-}    
+}
+
 button{
 background-color: white;
-
 height: 100%;
 margin: auto;
 width: 12%;
 }
+
 body {
 margin: 0;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -359,6 +376,11 @@ img.imgBrandHollywood{
 img.logoproctergamble{
     width: 40%;
 }
+
+img.logopepsico{
+    width: 70% !important;
+}
+
 /*.imgMarie{
     padding-top: 1rem;
 }*/
@@ -388,8 +410,8 @@ border-radius: 0;
 }
 
 button.agendabutton{
-    height: 29px !important;
-    width: 29px !important;
+    height: 38px !important;
+    width: 38px !important;
     border-radius: 50% !important;
     background-color: black;
     color: white;
@@ -4589,6 +4611,7 @@ min-height: 1px;
 /*padding: 1.25rem;*/
 /*border: solid 1px #202e21;*/
 text-align: center;
+background-color: #f4f4e4;
 }
 
 /*.card-body.TopLeft{
@@ -4643,7 +4666,7 @@ border-top: none !important;
 display: flex;
 flex-wrap: nowrap;
 justify-content: center;
-background-color: #e7e9d2 !important;
+background-color: #f4f4e4 !important;
 }
 
 .card-footer:last-child {
@@ -4694,6 +4717,11 @@ border-bottom-left-radius: calc(0.25rem - 1px);
 
 .card-deck .card {
 margin-bottom: 15px;
+}
+
+rect{
+    background-color:#f4f4e4;
+    fill: #f4f4e4;
 }
 
 @media (min-width: 576px) {
