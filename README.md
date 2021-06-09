@@ -1,6 +1,6 @@
 # Paradise Search: explore your favorite brands' offshore tax schemes.
 
-Paradise Search is based on public **open-source data** and shows you which company owns the brands on display, and how many **offshore subsidiaries** this company has in countries [flagged by the NGO Oxfam] (https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/file_attachments/bn-blacklist-whitewash-tax-havens-eu-281117-en_0.pdf) as "tax heavens".
+Paradise Search is based on public **open-source data** and shows you which company owns the brands on display, and how many **offshore subsidiaries** this company has in countries [flagged by the NGO Oxfam](https://oi-files-d8-prod.s3.eu-west-2.amazonaws.com/s3fs-public/file_attachments/bn-blacklist-whitewash-tax-havens-eu-281117-en_0.pdf) as "tax heavens".
 
 This way, you can easily spot which brands represent a bigger risk of **your money "evaporating" offshore**. 
 
